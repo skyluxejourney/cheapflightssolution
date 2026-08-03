@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, ArrowRight, Star, Users, Shield, Tag, Sparkles } from "lucide-react";
+import { COMPANY, CONTACT } from "@/app/constants";
 
 export default function ExclusiveDealsPoster() {
   // Use static positions instead of Math.random() to avoid hydration mismatches
@@ -30,12 +31,12 @@ export default function ExclusiveDealsPoster() {
   return (
     <section className="py-8 sm:py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-gradient-to-r from-[#AF935B] via-[#725B29] to-[#AF935B] rounded-sm overflow-hidden shadow-2xl">
+        <div className="relative bg-gradient-to-r from-[#0A1628] via-[#1A3A6B] to-[#2B5A9E] overflow-hidden shadow-2xl">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-3xl" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#4A8BCF] rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#7BAEE0] rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#4A8BCF] rounded-full blur-3xl" />
           </div>
 
           {/* Static Particles - No Math.random() */}
@@ -43,7 +44,7 @@ export default function ExclusiveDealsPoster() {
             {particles.map((particle, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-white/20 rounded-full animate-float"
+                className="absolute w-1 h-1 bg-[#7BAEE0]/30 rounded-full animate-float"
                 style={{
                   left: particle.left,
                   top: particle.top,
@@ -57,37 +58,37 @@ export default function ExclusiveDealsPoster() {
           <div className="relative flex flex-col lg:flex-row items-stretch">
             {/* Left Content */}
             <div className="flex-1 p-6 sm:p-8 lg:p-10 xl:p-12 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-4">
-                <Sparkles size={16} className="text-white" />
+              <div className="inline-flex items-center gap-2 bg-[#4A8BCF]/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-4">
+                <Sparkles size={16} className="text-[#7BAEE0]" />
                 <span className="text-white text-xs sm:text-sm font-semibold tracking-wider uppercase">
                   Exclusive Savings
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white !text-white mb-4 leading-tight">
                 Save Up to{" "}
-                <span className="text-yellow-300 relative">
+                <span className="text-[#7BAEE0] relative">
                   20%
-                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-yellow-300/30 rounded-full blur-sm" />
+                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#7BAEE0]/30 rounded-full blur-sm" />
                 </span>
               </h2>
 
-              <p className="text-white/90 text-sm sm:text-base lg:text-lg max-w-lg mx-auto lg:mx-0 mb-6">
+              <p className="text-white/90 !text-white/90 text-sm sm:text-base lg:text-lg max-w-lg mx-auto lg:mx-0 mb-6">
                 Call now and let our professional agents book your ticket at the best price.
                 Limited time offer – don't miss out!
               </p>
 
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 mb-6">
-                <div className="flex items-center gap-2 text-white/80">
+                <div className="flex items-center gap-2 text-white/80 !text-white/80">
                   <Star size={16} className="text-yellow-400 fill-yellow-400" />
                   <span className="text-sm font-medium">4.9/5 Rating</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/80">
+                <div className="flex items-center gap-2 text-white/80 !text-white/80">
                   <Users size={16} className="text-white/80" />
                   <span className="text-sm font-medium">2.5M+ Bookings</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/80">
+                <div className="flex items-center gap-2 text-white/80 !text-white/80">
                   <Shield size={16} className="text-white/80" />
                   <span className="text-sm font-medium">Secure Payment</span>
                 </div>
@@ -96,17 +97,17 @@ export default function ExclusiveDealsPoster() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
                 <a
-                  href="tel:+18888450220"
-                  className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-5 sm:px-6 py-3 w-full sm:w-auto hover:bg-white/30 transition-colors"
+                  href={`tel:${CONTACT.phoneRaw}`}
+                  className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-5 sm:px-6 py-3 w-full sm:w-auto hover:bg-white/20 transition-colors border border-white/20"
                 >
-                  <Phone size={20} className="text-white animate-pulse" />
-                  <span className="text-white font-bold text-base sm:text-lg tracking-wider">
-                    +1-888-845-0220
+                  <Phone size={20} className="text-[#7BAEE0] animate-pulse" />
+                  <span className="text-white !text-white font-bold text-base sm:text-lg tracking-wider">
+                    {CONTACT.phone}
                   </span>
                 </a>
                 <a
-                  href="tel:+18888450220"
-                  className="bg-white text-[#725B29] px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-[#F8F5EF] transition-colors shadow-lg hover:shadow-xl whitespace-nowrap w-full sm:w-auto flex items-center justify-center gap-2"
+                  href={`tel:${CONTACT.phoneRaw}`}
+                  className="bg-gradient-to-r from-[#4A8BCF] to-[#7BAEE0] text-white !text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:from-[#2B5A9E] hover:to-[#4A8BCF] transition-all duration-300 shadow-lg shadow-[#1A3A6B]/40 hover:shadow-xl hover:shadow-[#1A3A6B]/50 whitespace-nowrap w-full sm:w-auto flex items-center justify-center gap-2"
                 >
                   <span>Call Now</span>
                   <ArrowRight size={18} />
@@ -121,20 +122,20 @@ export default function ExclusiveDealsPoster() {
                 alt="Exclusive Travel Deals"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-[#111111]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-[#0A1628]/60 to-transparent" />
               
               {/* Floating Savings Badge */}
-              <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-[#F8F5EF] rounded-sm p-2 sm:p-3 shadow-xl">
-                <div className="bg-gradient-to-r from-[#AF935B] to-[#725B29] rounded-sm px-4 sm:px-6 py-2 sm:py-3 text-white text-center">
+              <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white p-2 sm:p-3 shadow-xl">
+                <div className="bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] px-4 sm:px-6 py-2 sm:py-3 text-white text-center">
                   <div className="text-xs sm:text-sm font-bold">Save Up To</div>
                   <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold">20%</div>
                 </div>
               </div>
 
               {/* Destination Tag */}
-              <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm rounded-sm px-4 py-2">
+              <div className="absolute bottom-4 left-4 bg-[#0A1628]/80 backdrop-blur-sm px-4 py-2">
                 <div className="flex items-center gap-2 text-white text-xs sm:text-sm">
-                  <Tag size={14} className="text-[#AF935B]" />
+                  <Tag size={14} className="text-[#4A8BCF]" />
                   <span>Exclusive Deals Available</span>
                 </div>
               </div>

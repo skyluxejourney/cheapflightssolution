@@ -1,21 +1,32 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans, DM_Sans, Outfit } from 'next/font/google';
 
-const headingFont = Plus_Jakarta_Sans({
+// Primary font - Clean, modern sans-serif (similar to Qatar Airways)
+const headingFont = Outfit({
   variable: '--font-heading',
   subsets: ['latin'],
   display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
-const bodyFont = Inter({
+// Secondary font - Clean body text
+const bodyFont = DM_Sans({
   variable: '--font-body',
   subsets: ['latin'],
   display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
+// Alternative: If you prefer Inter for body
+// const bodyFont = Inter({
+//   variable: '--font-body',
+//   subsets: ['latin'],
+//   display: 'swap',
+// });
+
 export const metadata: Metadata = {
-  title: 'Skyluxe Journey | Luxury Travel & Holiday Packages',
+  title: 'TicketToEurope | Luxury Travel & Holiday Packages',
   description:
     'Book luxury holiday packages, flights, hotels and customized trips with Skyluxe Journey.',
   keywords: [

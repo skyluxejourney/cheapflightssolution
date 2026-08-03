@@ -43,24 +43,24 @@ export default function TestimonialsSection() {
         <div className="max-w-5xl mx-auto">
           {/* Heading - Left Aligned */}
           <div className="mb-4">
-            <div className="inline-flex items-center gap-2 bg-[#AF935B]/10 px-4 py-1.5 mb-4">
-              <Quote size={16} className="text-[#AF935B]" />
-              <span className="text-[#725B29] text-xs sm:text-sm font-semibold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 bg-[#E8F0FE] px-4 py-1.5 mb-4 ">
+              <Quote size={16} className="text-[#1A3A6B]" />
+              <span className="text-[#1A3A6B] text-xs sm:text-sm font-semibold tracking-wider uppercase">
                 Testimonials
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111111] leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
               What Our Customers Say About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF935B] to-[#725B29]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF]">
                 Skyluxe Journey
               </span>
             </h2>
-            <div className="w-12 h-1 bg-[#AF935B] mt-3" />
+            <div className="w-12 h-1 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] mt-3 " />
           </div>
 
           {/* Content - Left Aligned */}
           <div className="mb-6 sm:mb-8">
-            <p className="text-[#111111]/70 text-sm sm:text-base max-w-2xl">
+            <p className="text-[#0A1628]/70 text-sm sm:text-base max-w-2xl">
               Nothing speaks louder than the voices of our happy travelers. Here's
               what real customers are saying about their experience booking with us.
             </p>
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-[#F8F5EF] p-5 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-[#F5F9FF] p-5 sm:p-6  shadow-lg hover:shadow-xl transition-all duration-300 hover:border-[#4A8BCF]/30 border border-[#E2E8F0]"
               >
                 {/* Rating Stars */}
                 <div className="flex mb-3">
@@ -81,14 +81,14 @@ export default function TestimonialsSection() {
                     <Star
                       key={i}
                       size={16}
-                      className="text-[#AF935B] fill-[#AF935B]"
+                      className="text-[#1A3A6B] fill-[#1A3A6B]"
                     />
                   ))}
                 </div>
 
                 {/* Testimonial Text - Short or Full */}
                 <div className="mb-3">
-                  <p className="text-[#111111]/80 text-sm sm:text-base leading-relaxed">
+                  <p className="text-[#0A1628]/80 text-sm sm:text-base leading-relaxed">
                     "{expandedId === testimonial.id ? testimonial.fullText : testimonial.shortText}"
                   </p>
                 </div>
@@ -96,10 +96,10 @@ export default function TestimonialsSection() {
                 {/* Customer Info */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-semibold text-[#111111] text-sm sm:text-base">
+                    <div className="font-semibold text-[#0A1628] text-sm sm:text-base">
                       {testimonial.name}
                     </div>
-                    <div className="text-sm text-[#725B29]">
+                    <div className="text-sm text-[#1A3A6B]">
                       {testimonial.location}
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
                   {/* View Testimonial Link */}
                   <button
                     onClick={() => toggleExpand(testimonial.id)}
-                    className="flex items-center gap-1 text-[#AF935B] hover:text-[#725B29] font-medium text-xs sm:text-sm transition-colors whitespace-nowrap ml-2"
+                    className="flex items-center gap-1 text-[#1A3A6B] hover:text-[#4A8BCF] font-medium text-xs sm:text-sm transition-colors whitespace-nowrap ml-2"
                   >
                     {expandedId === testimonial.id ? (
                       <>
@@ -125,9 +125,9 @@ export default function TestimonialsSection() {
 
                 {/* Expand/Collapse Animation */}
                 {expandedId === testimonial.id && (
-                  <div className="mt-3 pt-3 border-t border-[#AF935B]/10">
-                    <div className="flex items-center gap-2 text-xs text-[#111111]/40">
-                      <Quote size={12} className="text-[#AF935B]" />
+                  <div className="mt-3 pt-3 border-t border-[#E2E8F0]">
+                    <div className="flex items-center gap-2 text-xs text-[#0A1628]/40">
+                      <Quote size={12} className="text-[#1A3A6B]" />
                       <span>Full review</span>
                     </div>
                   </div>

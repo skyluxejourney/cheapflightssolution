@@ -2,6 +2,7 @@
 
 import { Star, Quote, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import { BRAND } from "@/app/constants"; 
 
 export default function TestimonialsSection() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -11,24 +12,24 @@ export default function TestimonialsSection() {
       id: 1,
       name: "Sarah Johnson",
       location: "New York, USA",
-      shortText: "Absolutely incredible experience! Skyluxe Journey made our dream vacation to Bali seamless.",
-      fullText: "Absolutely incredible experience! Skyluxe Journey made our dream vacation to Bali seamless. The attention to detail was outstanding and the booking process was so smooth. From the moment we booked until we returned home, everything was perfectly organized. The team went above and beyond to ensure we had the best experience possible. I can't recommend them enough!",
+      shortText: `Absolutely incredible experience! ${BRAND.name} made our dream vacation to Bali seamless.`,
+      fullText: `Absolutely incredible experience! ${BRAND.name} made our dream vacation to Bali seamless. The attention to detail was outstanding and the booking process was so smooth. From the moment we booked until we returned home, everything was perfectly organized. The team went above and beyond to ensure we had the best experience possible. I can't recommend them enough!`,
       rating: 5,
     },
     {
       id: 2,
       name: "Michael Chen",
       location: "London, UK",
-      shortText: "I've booked over 10 trips with Skyluxe Journey and every single one was perfect.",
-      fullText: "I've booked over 10 trips with Skyluxe Journey and every single one was perfect. Their customer support is unmatched and they always find the best deals. The prices are competitive, the service is exceptional, and the entire experience is stress-free. Whether it's a quick weekend getaway or a month-long adventure, they never disappoint. They've earned a customer for life!",
+      shortText: `I've booked over 10 trips with ${BRAND.name} and every single one was perfect.`,
+      fullText: `I've booked over 10 trips with ${BRAND.name} and every single one was perfect. Their customer support is unmatched and they always find the best deals. The prices are competitive, the service is exceptional, and the entire experience is stress-free. Whether it's a quick weekend getaway or a month-long adventure, they never disappoint. They've earned a customer for life!`,
       rating: 5,
     },
     {
       id: 3,
       name: "Emily Davis",
       location: "Sydney, Australia",
-      shortText: "From booking to returning home, everything was handled perfectly.",
-      fullText: "From booking to returning home, everything was handled perfectly. I'll never travel with anyone else. Highly recommend Skyluxe Journey to everyone! The team is professional, responsive, and genuinely cares about their customers. They made our family vacation unforgettable and we've already booked our next trip with them. If you're looking for a travel agency you can trust, look no further.",
+      shortText: `From booking to returning home, everything was handled perfectly.`,
+      fullText: `From booking to returning home, everything was handled perfectly. I'll never travel with anyone else. Highly recommend ${BRAND.name} to everyone! The team is professional, responsive, and genuinely cares about their customers. They made our family vacation unforgettable and we've already booked our next trip with them. If you're looking for a travel agency you can trust, look no further.`,
       rating: 5,
     },
   ];
@@ -52,7 +53,7 @@ export default function TestimonialsSection() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
               What Our Customers Say About{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF]">
-                Skyluxe Journey
+                {BRAND.name}
               </span>
             </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] mt-3 " />

@@ -1,5 +1,7 @@
 "use client";
 
+import {BRAND } from "@/app/constants"; 
+
 export default function WhyPayMoreSection() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-[#F5F9FF]">
@@ -12,7 +14,7 @@ export default function WhyPayMoreSection() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF]">
                 Fly Cheap
               </span>{" "}
-              with Skyluxe Journey
+              with {BRAND.name}
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] rounded-full mt-3" />
           </div>
@@ -22,13 +24,13 @@ export default function WhyPayMoreSection() {
             <p>
               Traveling is fun until it comes to online flight ticket booking. 
               Finding the best deal on domestic and international flights is 
-              now easy with Skyluxe Journey. It is one of the leading travel 
+              now easy with {BRAND.name}. It is one of the leading travel 
               agencies based in the USA.
             </p>
 
             <p>
               Whether you are planning a family vacation, solo trip, 
-              honeymoon trip, or friend's trip, Skyluxe Journey helps you get 
+              honeymoon trip, or friend's trip, {BRAND.name} helps you get 
               cheap flight tickets. From budget traveling to luxury traveling, 
               we have everything you need for your comfortable journey.
             </p>
@@ -37,7 +39,7 @@ export default function WhyPayMoreSection() {
               With our premium flight booking services, you can book your 
               roundtrip or one-way air tickets in just a few minutes. If you 
               want to save your money on flight bookings, make sure you book 
-              your all flight tickets with Skyluxe Journey.
+              your all flight tickets with {BRAND.name}.
             </p>
 
             <p>
@@ -65,9 +67,9 @@ export default function WhyPayMoreSection() {
             </p>
 
             <p className="font-semibold text-[#0A1628] text-base sm:text-lg pt-2">
-              When you're getting guaranteed cheap flight tickets at Skyluxe 
-              Journey, why are you delaying your exploration? Explore the world 
-              at minimal cost. This world is waiting for you. Go grab the best 
+              When you're getting guaranteed cheap flight tickets at {BRAND.name}, 
+              why are you delaying your exploration? Explore the world at 
+              minimal cost. This world is waiting for you. Go grab the best 
               deals and save your hard-earned money.
             </p>
           </div>

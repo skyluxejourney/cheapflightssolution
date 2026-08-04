@@ -1,6 +1,7 @@
 "use client";
 
 import { Users, DollarSign, Lock, Shield, Award, Headphones } from "lucide-react";
+import {BRAND } from "@/app/constants";
 
 export default function WhyTrustSection() {
   const trustFeatures = [
@@ -31,7 +32,7 @@ export default function WhyTrustSection() {
               Why Millions Trust
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF]">
-                Skyluxe Journey
+                {BRAND.name}
               </span>
             </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] rounded-full mt-3" />

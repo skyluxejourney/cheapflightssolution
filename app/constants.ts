@@ -1,20 +1,20 @@
 // Company Information
 export const COMPANY = {
-  name: "Ticket to Oceania",
-  domain: "tickettooceania.com",
-  email: "bookings@tickettooceania.com",
-  phone: "+1-8555387343",
-  phoneRaw: "18555387343",
+  name: "CheapFlightsSolution",
+  domain: "cheapflightsolution.com",
+  email: "bookings@cheapflightsolution.com",
+  phone: "+1-8776852739",
+  phoneRaw: "18776852739",
   address: "123 Travel Street, New York, USA",
   year: new Date().getFullYear(),
 };
 
 // Social Media Links
 export const SOCIAL = {
-  facebook: "https://facebook.com/tickettooceania",
-  twitter: "https://twitter.com/tickettooceania",
-  instagram: "https://instagram.com/tickettooceania",
-  youtube: "https://youtube.com/tickettooceania",
+  facebook: "https://facebook.com/cheapflightsolution",
+  twitter: "https://twitter.com/cheapflightsolution",
+  instagram: "https://instagram.com/cheapflightsolution",
+  youtube: "https://youtube.com/cheapflightsolution",
 };
 
 // Contact Information
@@ -36,18 +36,17 @@ export const BRAND = {
 
 // Default Meta Information
 export const META = {
-  title: `${COMPANY.name} | Luxury Travel & Holiday Packages`,
-  description: `Book luxury holiday packages, flights, hotels and customized trips with ${COMPANY.name}.`,
+  title: `${COMPANY.name} | Cheap Flights & Travel Deals`,
+  description: `Find cheap flights, exclusive travel deals, and affordable holiday packages with ${COMPANY.name}. Book your next adventure today!`,
   keywords: [
     COMPANY.name,
-    "travel agency",
-    "holiday packages",
-    "flights",
-    "hotels",
-    "Sydney package",
-    "Melbourne package",
-    "Auckland package",
-    "Queenstown package",
+    "cheap flights",
+    "travel deals",
+    "budget travel",
+    "affordable flights",
+    "flight deals",
+    "discount airfare",
+    "cheap travel",
   ],
 };
 

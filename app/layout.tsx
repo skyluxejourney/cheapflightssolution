@@ -26,12 +26,12 @@ const bodyFont = DM_Sans({
 // });
 
 export const metadata: Metadata = {
-  title: 'TicketToOceania | Luxury Travel & Holiday Packages',
+  title: 'CheapFlightsSolution | Luxury Travel & Holiday Packages',
   description:
-    'Book luxury holiday packages, flights, hotels and customized trips with TicketToOceania.',
+    'Book luxury holiday packages, flights, hotels and customized trips with CheapFlightsSolution.',
   keywords: [
     'Skyluxe Journey',
-    'ticket to oceania',
+    'Cheap flights Solution',
     'travel agency',
     'holiday packages',
     'flights',

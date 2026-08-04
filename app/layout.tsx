@@ -26,11 +26,12 @@ const bodyFont = DM_Sans({
 // });
 
 export const metadata: Metadata = {
-  title: 'TicketToEurope | Luxury Travel & Holiday Packages',
+  title: 'TicketToAsia | Luxury Travel & Holiday Packages',
   description:
-    'Book luxury holiday packages, flights, hotels and customized trips with Skyluxe Journey.',
+    'Book luxury holiday packages, flights, hotels and customized trips with TicketToAsia.',
   keywords: [
     'Skyluxe Journey',
+    'ticket to asia',
     'travel agency',
     'holiday packages',
     'flights',

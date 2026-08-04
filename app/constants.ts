@@ -1,20 +1,20 @@
 // Company Information
 export const COMPANY = {
-  name: "Ticket to Africa",
-  domain: "tickettoafrica.com",
-  email: "bookings@tickettoafrica.com",
-  phone: "+1-8338772671",
-  phoneRaw: "18338772671",
+  name: "Ticket to Oceania",
+  domain: "tickettooceania.com",
+  email: "bookings@tickettooceania.com",
+  phone: "+1-8555387343",
+  phoneRaw: "18555387343",
   address: "123 Travel Street, New York, USA",
   year: new Date().getFullYear(),
 };
 
 // Social Media Links
 export const SOCIAL = {
-  facebook: "https://facebook.com/tickettoafrica",
-  twitter: "https://twitter.com/tickettoafrica",
-  instagram: "https://instagram.com/tickettoafrica",
-  youtube: "https://youtube.com/tickettoafrica",
+  facebook: "https://facebook.com/tickettooceania",
+  twitter: "https://twitter.com/tickettooceania",
+  instagram: "https://instagram.com/tickettooceania",
+  youtube: "https://youtube.com/tickettooceania",
 };
 
 // Contact Information
@@ -44,10 +44,10 @@ export const META = {
     "holiday packages",
     "flights",
     "hotels",
-    "Cape Town package",
-    "Nairobi package",
-    "Cairo package",
-    "Marrakech package",
+    "Sydney package",
+    "Melbourne package",
+    "Auckland package",
+    "Queenstown package",
   ],
 };
 

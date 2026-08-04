@@ -14,6 +14,7 @@ import ContactModal from "./ContactModal";
 import Link from "next/link";
 import Image from "next/image";
 import { COMPANY, CONTACT, BRAND } from "@/app/constants";
+import { getAllAirlines, AirlineData } from "@/app/airlines/[slug]/constants";
 
 export default function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -26,15 +27,20 @@ export default function Footer() {
     { name: "Contact", href: "#" },
   ];
 
-  const topAirlines = [
-    { name: "British Airways", slug: "british-airways" },
-    { name: "Lufthansa", slug: "lufthansa" },
-    { name: "Air France", slug: "air-france" },
-    { name: "KLM Royal Dutch Airlines", slug: "klm-royal-dutch-airlines" },
-    { name: "Turkish Airlines", slug: "turkish-airlines" },
-    { name: "SWISS International Airlines", slug: "swiss-international-airlines" },
-    { name: "Virgin Atlantic", slug: "virgin-atlantic" },
-  ];
+  // Get top airlines from the airlinesData - limit to 7 for display
+  const allAirlines = getAllAirlines();
+  const topAirlines = allAirlines.slice(0, 7).map((airline: AirlineData) => ({
+    name: airline.name,
+    slug: getSlugFromName(airline.name)
+  }));
+
+  // Helper function to generate slug from airline name
+  function getSlugFromName(name: string): string {
+    return name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '');
+  }
 
   const handleLinkClick = (e: React.MouseEvent, linkName: string) => {
     e.preventDefault();
@@ -75,7 +81,7 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-sm text-[#0A1628]/60 leading-relaxed mb-4 max-w-xs">
-                Your trusted partner for unforgettable travel experiences. We help
+                Your trusted partner for unforgettable travel experiences across Asia and beyond. We help
                 you discover the world with ease and comfort.
               </p>
               <div className="flex items-center gap-3 text-sm text-[#0A1628]/60">

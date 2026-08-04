@@ -41,7 +41,7 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
                 Contact Us
               </h3>
               <p className="text-white/80 text-sm">
-                {selectedItem} - Get in touch with us
+                Book Your Ticket - Get in touch with us
               </p>
             </div>
           </div>

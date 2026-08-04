@@ -1,20 +1,20 @@
 // Company Information
 export const COMPANY = {
-  name: "Ticket to Europe",
-  domain: "tickettoeurope.com",
-  email: "bookings@tickettoeurope.com",
-  phone: "+1-18554937655",
-  phoneRaw: "18554937655",
+  name: "Ticket to Asia",
+  domain: "tickettoasia.com",
+  email: "bookings@tickettoasia.com",
+  phone: "+1-8662286373",
+  phoneRaw: "18662286373",
   address: "123 Travel Street, New York, USA",
   year: new Date().getFullYear(),
 };
 
 // Social Media Links
 export const SOCIAL = {
-  facebook: "https://facebook.com/tickettoeurope",
-  twitter: "https://twitter.com/tickettoeurope",
-  instagram: "https://instagram.com/tickettoeurope",
-  youtube: "https://youtube.com/tickettoeurope",
+  facebook: "https://facebook.com/tickettoasia",
+  twitter: "https://twitter.com/tickettoasia",
+  instagram: "https://instagram.com/tickettoasia",
+  youtube: "https://youtube.com/tickettoasia",
 };
 
 // Contact Information
@@ -30,7 +30,7 @@ export const CONTACT = {
 export const BRAND = {
   name: COMPANY.name,
   tagline: "Travel & Adventures",
-  logo: "/logo/ticket.png",
+  logo: "/logo/ticket.png", // Consider updating logo path if you have a new logo
   favicon: "/favicon.ico",
 };
 
@@ -44,9 +44,9 @@ export const META = {
     "holiday packages",
     "flights",
     "hotels",
-    "Dubai package",
-    "Bali package",
-    "Maldives package",
+    "Tokyo package",
+    "Bangkok package",
+    "Singapore package",
   ],
 };
 

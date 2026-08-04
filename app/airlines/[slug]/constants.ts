@@ -20,203 +20,203 @@ export interface AirlineData {
 }
 
 export const airlinesData: Record<string, AirlineData> = {
-  "singapore-airlines": {
-    name: "Singapore Airlines",
-    code: "SQ",
-    description: "Singapore Airlines is the flag carrier of Singapore, renowned for its exceptional service, modern fleet, and world-class amenities. It is consistently rated as one of the best airlines in the world.",
-    hub: "Singapore Changi Airport (SIN)",
-    founded: "1947",
-    fleet: "150+",
-    destinations: "130+",
-    alliance: "Star Alliance",
-    website: "https://www.singaporeair.com",
-    rating: 4.8,
-    reviews: 2150,
-    highlights: ["First Class Suites", "Business Class", "Premium Economy", "KrisFlyer", "Book the Cook"],
-    phoneNumber: "18557546902",
-    email: "support@singaporeair.com",
+  "emirates": {
+    name: "Emirates",
+    code: "EK",
+    description: "Emirates is the flag carrier of the United Arab Emirates, renowned for its luxurious services, modern fleet, and world-class amenities. It connects Dubai to over 150 destinations across six continents.",
+    hub: "Dubai International Airport (DXB)",
+    founded: "1985",
+    fleet: "260+",
+    destinations: "150+",
+    alliance: "None",
+    website: "https://www.emirates.com",
+    rating: 4.9,
+    reviews: 3200,
+    highlights: ["First Class Suites", "Business Class", "Premium Economy", "Skywards", "Chauffeur Drive"],
+    phoneNumber: "18557640399",
+    email: "support@emirates.com",
     faqs: [
       {
-        question: "How do I change my Singapore Airlines flight?",
-        answer: "You can change your Singapore Airlines flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name to access your reservation. You can also call Singapore Airlines customer service at +1-855-754-6902 for assistance with changes."
+        question: "How do I change my Emirates flight?",
+        answer: "You can change your Emirates flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name to access your reservation. You can also call Emirates customer service at +1-855-764-0399 for assistance with changes."
       },
       {
-        question: "What is the Singapore Airlines cancellation policy?",
-        answer: "Singapore Airlines cancellation policy varies by fare type. Fully refundable tickets are eligible for a full refund. Non-refundable tickets may receive a travel credit for future travel. Cancellations made within 24 hours of booking are eligible for a full refund regardless of fare type."
+        question: "What is the Emirates cancellation policy?",
+        answer: "Emirates cancellation policy varies by fare type. Fully refundable tickets are eligible for a full refund. Non-refundable tickets may receive a travel credit for future travel. Cancellations made within 24 hours of booking are eligible for a full refund regardless of fare type."
       },
       {
-        question: "Can I reschedule my Singapore Airlines flight without penalty?",
-        answer: "Singapore Airlines offers flexible rescheduling options. Business and First Class tickets typically have no change fees. Premium Economy and Economy tickets may have change fees depending on the fare type. KrisFlyer elite members may receive complimentary changes."
+        question: "Can I reschedule my Emirates flight without penalty?",
+        answer: "Emirates offers flexible rescheduling options. Business and First Class tickets typically have no change fees. Premium Economy and Economy tickets may have change fees depending on the fare type. Skywards elite members may receive complimentary changes."
       },
       {
-        question: "How do I correct a name error on my Singapore Airlines ticket?",
-        answer: "Minor name corrections can be made on Singapore Airlines tickets. Contact Singapore Airlines customer service at +1-855-754-6902 for name correction assistance. Changes within 24 hours of booking are typically free."
+        question: "How do I correct a name error on my Emirates ticket?",
+        answer: "Minor name corrections can be made on Emirates tickets. Contact Emirates customer service at +1-855-764-0399 for name correction assistance. Changes within 24 hours of booking are typically free."
       },
       {
-        question: "What fees apply for changing my Singapore Airlines flight?",
-        answer: "Singapore Airlines change fees vary by fare type, route, and timing. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+        question: "What fees apply for changing my Emirates flight?",
+        answer: "Emirates change fees vary by fare type, route, and timing. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
       },
       {
-        question: "How do I get a refund from Singapore Airlines?",
-        answer: "To request a refund from Singapore Airlines, visit the 'Manage Booking' section on their website or call customer service at +1-855-754-6902. Refunds for eligible tickets are processed within 7-10 business days."
+        question: "How do I get a refund from Emirates?",
+        answer: "To request a refund from Emirates, visit the 'Manage Booking' section on their website or call customer service at +1-855-764-0399. Refunds for eligible tickets are processed within 7-10 business days."
       },
       {
-        question: "Can I change my Singapore Airlines flight online?",
-        answer: "Yes, most Singapore Airlines flights can be changed online through the 'Manage Booking' portal on their website. You'll need your booking reference and last name."
+        question: "Can I change my Emirates flight online?",
+        answer: "Yes, most Emirates flights can be changed online through the 'Manage Booking' portal on their website. You'll need your booking reference and last name."
       },
       {
-        question: "What happens if Singapore Airlines cancels my flight?",
-        answer: "If Singapore Airlines cancels your flight, you are entitled to a full refund or rebooking on the next available flight at no additional cost. You will be notified via email or text message."
+        question: "What happens if Emirates cancels my flight?",
+        answer: "If Emirates cancels your flight, you are entitled to a full refund or rebooking on the next available flight at no additional cost. You will be notified via email or text message."
       }
     ]
   },
-  "cathay-pacific": {
-    name: "Cathay Pacific",
-    code: "CX",
-    description: "Cathay Pacific is the flag carrier of Hong Kong, offering premium services and extensive connections across Asia, Europe, and North America. Known for exceptional hospitality and modern aircraft.",
-    hub: "Hong Kong International Airport (HKG)",
-    founded: "1946",
-    fleet: "150+",
-    destinations: "90+",
+  "qatar-airways": {
+    name: "Qatar Airways",
+    code: "QR",
+    description: "Qatar Airways is the flag carrier of Qatar, offering award-winning service and extensive global connections. Known for its exceptional hospitality and modern fleet, it connects Doha to over 160 destinations worldwide.",
+    hub: "Hamad International Airport (DOH)",
+    founded: "1993",
+    fleet: "200+",
+    destinations: "160+",
     alliance: "oneworld",
-    website: "https://www.cathaypacific.com",
+    website: "https://www.qatarairways.com",
+    rating: 4.8,
+    reviews: 2800,
+    highlights: ["Qsuite", "Business Class", "Premium Economy", "Privilege Club", "Al Mourjan Lounge"],
+    phoneNumber: "18778099955",
+    email: "support@qatarairways.com",
+    faqs: [
+      {
+        question: "How do I change my Qatar Airways flight?",
+        answer: "You can change your Qatar Airways flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. You can also call Qatar Airways customer service at +1-877-809-9955 for assistance."
+      },
+      {
+        question: "What is the Qatar Airways cancellation policy?",
+        answer: "Qatar Airways cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
+      },
+      {
+        question: "Can I reschedule my Qatar Airways flight without penalty?",
+        answer: "Qatar Airways offers free changes for Business and First Class tickets. Premium Economy and Economy tickets may have fees depending on the fare type. Privilege Club members with elite status may receive complimentary changes."
+      },
+      {
+        question: "How do I correct a name error on my Qatar Airways ticket?",
+        answer: "Contact Qatar Airways customer service at +1-877-809-9955 for name correction assistance on your ticket. Minor name corrections can be made within 24 hours of booking."
+      },
+      {
+        question: "What fees apply for changing my Qatar Airways flight?",
+        answer: "Qatar Airways change fees vary by fare type. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+      },
+      {
+        question: "How do I get a refund from Qatar Airways?",
+        answer: "To request a refund from Qatar Airways, visit the 'Manage Booking' section or call customer service at +1-877-809-9955."
+      },
+      {
+        question: "Can I change my Qatar Airways flight online?",
+        answer: "Yes, most Qatar Airways flights can be changed online through their website. You'll need your booking reference and last name."
+      },
+      {
+        question: "What happens if Qatar Airways cancels my flight?",
+        answer: "If Qatar Airways cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
+      }
+    ]
+  },
+  "etihad-airways": {
+    name: "Etihad Airways",
+    code: "EY",
+    description: "Etihad Airways is the flag carrier of the United Arab Emirates, offering luxurious services and connecting Abu Dhabi to destinations across the Middle East, Asia, Europe, and the Americas.",
+    hub: "Zayed International Airport (AUH)",
+    founded: "2003",
+    fleet: "90+",
+    destinations: "80+",
+    alliance: "None",
+    website: "https://www.etihad.com",
     rating: 4.7,
-    reviews: 1870,
-    highlights: ["First Class", "Business Class", "Premium Economy", "Marco Polo Club", "Asia Miles"],
-    phoneNumber: "18882910137",
-    email: "support@cathaypacific.com",
+    reviews: 2100,
+    highlights: ["The Residence", "First Class", "Business Class", "Etihad Guest", "Chauffeur Service"],
+    phoneNumber: "18557391017",
+    email: "support@etihad.com",
     faqs: [
       {
-        question: "How do I change my Cathay Pacific flight?",
-        answer: "You can change your Cathay Pacific flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. You can also call Cathay Pacific customer service at +1-888-291-0137 for assistance."
+        question: "How do I change my Etihad Airways flight?",
+        answer: "You can change your Etihad Airways flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. Call Etihad Airways customer service at +1-855-739-1017 for assistance."
       },
       {
-        question: "What is the Cathay Pacific cancellation policy?",
-        answer: "Cathay Pacific cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
+        question: "What is the Etihad Airways cancellation policy?",
+        answer: "Etihad Airways cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
       },
       {
-        question: "Can I reschedule my Cathay Pacific flight without penalty?",
-        answer: "Cathay Pacific offers free changes for First and Business Class tickets. Premium Economy and Economy tickets may have fees depending on the fare type. Marco Polo Club members with elite status may receive complimentary changes."
+        question: "Can I reschedule my Etihad Airways flight without penalty?",
+        answer: "Etihad Airways offers free changes for First and Business Class tickets. Economy tickets may have change fees depending on the fare type. Etihad Guest members with elite status may receive complimentary changes."
       },
       {
-        question: "How do I correct a name error on my Cathay Pacific ticket?",
-        answer: "Contact Cathay Pacific customer service at +1-888-291-0137 for name correction assistance on your ticket. Minor name corrections can be made within 24 hours of booking."
+        question: "How do I correct a name error on my Etihad Airways ticket?",
+        answer: "Contact Etihad Airways customer service at +1-855-739-1017 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
       },
       {
-        question: "What fees apply for changing my Cathay Pacific flight?",
-        answer: "Cathay Pacific change fees vary by fare type. First and Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+        question: "What fees apply for changing my Etihad Airways flight?",
+        answer: "Etihad Airways change fees vary by fare type. First and Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
       },
       {
-        question: "How do I get a refund from Cathay Pacific?",
-        answer: "To request a refund from Cathay Pacific, visit the 'Manage Booking' section or call customer service at +1-888-291-0137."
+        question: "How do I get a refund from Etihad Airways?",
+        answer: "To request a refund from Etihad Airways, visit the 'Manage Booking' section or call customer service at +1-855-739-1017."
       },
       {
-        question: "Can I change my Cathay Pacific flight online?",
-        answer: "Yes, most Cathay Pacific flights can be changed online through their website. You'll need your booking reference and last name."
+        question: "Can I change my Etihad Airways flight online?",
+        answer: "Yes, most Etihad Airways flights can be changed online through their website. You'll need your booking reference and last name."
       },
       {
-        question: "What happens if Cathay Pacific cancels my flight?",
-        answer: "If Cathay Pacific cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
+        question: "What happens if Etihad Airways cancels my flight?",
+        answer: "If Etihad Airways cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
       }
     ]
   },
-  "korean-air": {
-    name: "Korean Air",
-    code: "KE",
-    description: "Korean Air is the flag carrier of South Korea, offering world-class service and extensive connections across Asia, Americas, and Europe. Known for its modern fleet and exceptional Korean hospitality.",
-    hub: "Incheon International Airport (ICN)",
-    founded: "1969",
-    fleet: "160+",
-    destinations: "120+",
-    alliance: "SkyTeam",
-    website: "https://www.koreanair.com",
-    rating: 4.6,
-    reviews: 1650,
-    highlights: ["First Class", "Prestige Class", "Business Class", "SKYPASS", "Korean Hospitality"],
-    phoneNumber: "18338397273",
-    email: "support@koreanair.com",
-    faqs: [
-      {
-        question: "How do I change my Korean Air flight?",
-        answer: "You can change your Korean Air flight online through the 'Manage My Booking' section on their website. Enter your booking reference and last name. Call Korean Air customer service at +1-833-839-7273 for assistance."
-      },
-      {
-        question: "What is the Korean Air cancellation policy?",
-        answer: "Korean Air cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
-      },
-      {
-        question: "Can I reschedule my Korean Air flight without penalty?",
-        answer: "Korean Air offers free changes for First and Prestige Class tickets. Economy tickets may have change fees depending on the fare type. SKYPASS members with elite status may receive complimentary changes."
-      },
-      {
-        question: "How do I correct a name error on my Korean Air ticket?",
-        answer: "Contact Korean Air customer service at +1-833-839-7273 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
-      },
-      {
-        question: "What fees apply for changing my Korean Air flight?",
-        answer: "Korean Air change fees vary by fare type. First and Prestige Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
-      },
-      {
-        question: "How do I get a refund from Korean Air?",
-        answer: "To request a refund from Korean Air, visit the 'Manage My Booking' section or call customer service at +1-833-839-7273."
-      },
-      {
-        question: "Can I change my Korean Air flight online?",
-        answer: "Yes, most Korean Air flights can be changed online through their website. You'll need your booking reference and last name."
-      },
-      {
-        question: "What happens if Korean Air cancels my flight?",
-        answer: "If Korean Air cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
-      }
-    ]
-  },
-  "philippine-airlines": {
-    name: "Philippine Airlines",
-    code: "PR",
-    description: "Philippine Airlines is the flag carrier of the Philippines, offering warm Filipino hospitality and extensive connections across Asia, Americas, and the Pacific.",
-    hub: "Ninoy Aquino International Airport (MNL)",
-    founded: "1941",
-    fleet: "70+",
+  "kuwait-airways": {
+    name: "Kuwait Airways",
+    code: "KU",
+    description: "Kuwait Airways is the flag carrier of Kuwait, offering authentic Arabian hospitality and connecting Kuwait City to destinations across the Middle East, Asia, Europe, and North America.",
+    hub: "Kuwait International Airport (KWI)",
+    founded: "1954",
+    fleet: "30+",
     destinations: "60+",
     alliance: "None",
-    website: "https://www.philippineairlines.com",
-    rating: 4.4,
-    reviews: 1250,
-    highlights: ["Business Class", "Premium Economy", "Economy", "Mabuhay Miles", "Warm Filipino Service"],
-    phoneNumber: "18664242536",
-    email: "support@philippineairlines.com",
+    website: "https://www.kuwaitairways.com",
+    rating: 4.3,
+    reviews: 980,
+    highlights: ["Business Class", "Premium Economy", "Economy", "Oasis Club", "Arabian Hospitality"],
+    phoneNumber: "18663722767",
+    email: "support@kuwaitairways.com",
     faqs: [
       {
-        question: "How do I change my Philippine Airlines flight?",
-        answer: "You can change your Philippine Airlines flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. Call Philippine Airlines customer service at +1-866-424-2536 for assistance."
+        question: "How do I change my Kuwait Airways flight?",
+        answer: "You can change your Kuwait Airways flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. Call Kuwait Airways customer service at +1-866-372-2767 for assistance."
       },
       {
-        question: "What is the Philippine Airlines cancellation policy?",
-        answer: "Philippine Airlines cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
+        question: "What is the Kuwait Airways cancellation policy?",
+        answer: "Kuwait Airways cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
       },
       {
-        question: "Can I reschedule my Philippine Airlines flight without penalty?",
-        answer: "Philippine Airlines offers free changes for Business Class tickets. Premium Economy and Economy tickets may have change fees depending on the fare type. Mabuhay Miles members may receive complimentary changes."
+        question: "Can I reschedule my Kuwait Airways flight without penalty?",
+        answer: "Kuwait Airways offers free changes for Business Class tickets. Economy tickets may have change fees depending on the fare type. Oasis Club members may receive complimentary changes."
       },
       {
-        question: "How do I correct a name error on my Philippine Airlines ticket?",
-        answer: "Contact Philippine Airlines customer service at +1-866-424-2536 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
+        question: "How do I correct a name error on my Kuwait Airways ticket?",
+        answer: "Contact Kuwait Airways customer service at +1-866-372-2767 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
       },
       {
-        question: "What fees apply for changing my Philippine Airlines flight?",
-        answer: "Philippine Airlines change fees vary by fare type. Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+        question: "What fees apply for changing my Kuwait Airways flight?",
+        answer: "Kuwait Airways change fees vary by fare type. Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
       },
       {
-        question: "How do I get a refund from Philippine Airlines?",
-        answer: "To request a refund from Philippine Airlines, visit the 'Manage Booking' section or call customer service at +1-866-424-2536."
+        question: "How do I get a refund from Kuwait Airways?",
+        answer: "To request a refund from Kuwait Airways, visit the 'Manage Booking' section or call customer service at +1-866-372-2767."
       },
       {
-        question: "Can I change my Philippine Airlines flight online?",
-        answer: "Yes, most Philippine Airlines flights can be changed online through their website. You'll need your booking reference and last name."
+        question: "Can I change my Kuwait Airways flight online?",
+        answer: "Yes, most Kuwait Airways flights can be changed online through their website. You'll need your booking reference and last name."
       },
       {
-        question: "What happens if Philippine Airlines cancels my flight?",
-        answer: "If Philippine Airlines cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
+        question: "What happens if Kuwait Airways cancels my flight?",
+        answer: "If Kuwait Airways cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
       }
     ]
   }

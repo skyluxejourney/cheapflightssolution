@@ -1,20 +1,20 @@
 // Company Information
 export const COMPANY = {
-  name: "Ticket to Middle East",
-  domain: "tickettomiddleeast.com",
-  email: "bookings@tickettomiddleeast.com",
-  phone: "+1-8666521753",
-  phoneRaw: "18666521753",
+  name: "TicketNorthAmerica",
+  domain: "ticketnorthamerica.com",
+  email: "bookings@ticketnorthamerica.com",
+  phone: "+1-8338463961",
+  phoneRaw: "18338463961",
   address: "123 Travel Street, New York, USA",
   year: new Date().getFullYear(),
 };
 
 // Social Media Links
 export const SOCIAL = {
-  facebook: "https://facebook.com/tickettomiddleeast",
-  twitter: "https://twitter.com/tickettomiddleeast",
-  instagram: "https://instagram.com/tickettomiddleeast",
-  youtube: "https://youtube.com/tickettomiddleeast",
+  facebook: "https://facebook.com/ticketnorthamerica",
+  twitter: "https://twitter.com/ticketnorthamerica",
+  instagram: "https://instagram.com/ticketnorthamerica",
+  youtube: "https://youtube.com/ticketnorthamerica",
 };
 
 // Contact Information
@@ -44,10 +44,10 @@ export const META = {
     "holiday packages",
     "flights",
     "hotels",
-    "Dubai package",
-    "Doha package",
-    "Abu Dhabi package",
-    "Kuwait package",
+    "New York package",
+    "Los Angeles package",
+    "Miami package",
+    "Toronto package",
   ],
 };
 

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import SearchEngine from "@/components/SearchEngine";
 import heroImage from "@/public/images/skyluxe-hero-banner.jpg";
+import { BRAND } from "@/app/constants";
 
 interface AirlineHeroProps {
   airlineName: string;
@@ -15,7 +16,7 @@ export default function AirlineHero({ airlineName }: AirlineHeroProps) {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/herobackground.jpg"
-          alt={`${airlineName} flights - Ticket to Europe`}
+          alt={`${airlineName} flights - ${BRAND.name}`}
           fill
           className="object-cover object-center"
           priority
@@ -42,7 +43,7 @@ export default function AirlineHero({ airlineName }: AirlineHeroProps) {
           </h1>
 
           <p className="text-white/80 text-sm sm:text-base md:text-lg w-full mb-6 sm:mb-8 font-light tracking-wide leading-relaxed max-w-none">
-            TickettoEurope is an independent travel agency. Our agents can help you understand {airlineName} Airlines' published change, cancellation, name-correction, and upgrade policies so you can decide on the right next step for your trip.
+            {BRAND.name} is an independent travel agency. Our agents can help you understand {airlineName} Airlines' published change, cancellation, name-correction, and upgrade policies so you can decide on the right next step for your trip.
           </p>
 
           {/* Search Engine Component */}

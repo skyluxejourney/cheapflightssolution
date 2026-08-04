@@ -20,203 +20,153 @@ export interface AirlineData {
 }
 
 export const airlinesData: Record<string, AirlineData> = {
-  "emirates": {
-    name: "Emirates",
-    code: "EK",
-    description: "Emirates is the flag carrier of the United Arab Emirates, renowned for its luxurious services, modern fleet, and world-class amenities. It connects Dubai to over 150 destinations across six continents.",
-    hub: "Dubai International Airport (DXB)",
-    founded: "1985",
-    fleet: "260+",
-    destinations: "150+",
-    alliance: "None",
-    website: "https://www.emirates.com",
-    rating: 4.9,
-    reviews: 3200,
-    highlights: ["First Class Suites", "Business Class", "Premium Economy", "Skywards", "Chauffeur Drive"],
-    phoneNumber: "18557640399",
-    email: "support@emirates.com",
-    faqs: [
-      {
-        question: "How do I change my Emirates flight?",
-        answer: "You can change your Emirates flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name to access your reservation. You can also call Emirates customer service at +1-855-764-0399 for assistance with changes."
-      },
-      {
-        question: "What is the Emirates cancellation policy?",
-        answer: "Emirates cancellation policy varies by fare type. Fully refundable tickets are eligible for a full refund. Non-refundable tickets may receive a travel credit for future travel. Cancellations made within 24 hours of booking are eligible for a full refund regardless of fare type."
-      },
-      {
-        question: "Can I reschedule my Emirates flight without penalty?",
-        answer: "Emirates offers flexible rescheduling options. Business and First Class tickets typically have no change fees. Premium Economy and Economy tickets may have change fees depending on the fare type. Skywards elite members may receive complimentary changes."
-      },
-      {
-        question: "How do I correct a name error on my Emirates ticket?",
-        answer: "Minor name corrections can be made on Emirates tickets. Contact Emirates customer service at +1-855-764-0399 for name correction assistance. Changes within 24 hours of booking are typically free."
-      },
-      {
-        question: "What fees apply for changing my Emirates flight?",
-        answer: "Emirates change fees vary by fare type, route, and timing. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
-      },
-      {
-        question: "How do I get a refund from Emirates?",
-        answer: "To request a refund from Emirates, visit the 'Manage Booking' section on their website or call customer service at +1-855-764-0399. Refunds for eligible tickets are processed within 7-10 business days."
-      },
-      {
-        question: "Can I change my Emirates flight online?",
-        answer: "Yes, most Emirates flights can be changed online through the 'Manage Booking' portal on their website. You'll need your booking reference and last name."
-      },
-      {
-        question: "What happens if Emirates cancels my flight?",
-        answer: "If Emirates cancels your flight, you are entitled to a full refund or rebooking on the next available flight at no additional cost. You will be notified via email or text message."
-      }
-    ]
-  },
-  "qatar-airways": {
-    name: "Qatar Airways",
-    code: "QR",
-    description: "Qatar Airways is the flag carrier of Qatar, offering award-winning service and extensive global connections. Known for its exceptional hospitality and modern fleet, it connects Doha to over 160 destinations worldwide.",
-    hub: "Hamad International Airport (DOH)",
-    founded: "1993",
-    fleet: "200+",
-    destinations: "160+",
+  "american-airlines": {
+    name: "American Airlines",
+    code: "AA",
+    description: "American Airlines is one of the largest airlines in the world, offering extensive domestic and international routes across North America, Europe, Asia, and Latin America. Known for its reliable service and modern fleet.",
+    hub: "Dallas/Fort Worth International Airport (DFW)",
+    founded: "1930",
+    fleet: "950+",
+    destinations: "350+",
     alliance: "oneworld",
-    website: "https://www.qatarairways.com",
-    rating: 4.8,
-    reviews: 2800,
-    highlights: ["Qsuite", "Business Class", "Premium Economy", "Privilege Club", "Al Mourjan Lounge"],
-    phoneNumber: "18778099955",
-    email: "support@qatarairways.com",
+    website: "https://www.aa.com",
+    rating: 4.4,
+    reviews: 2500,
+    highlights: ["Business Class", "Premium Economy", "Admirals Club", "AAdvantage", "Main Cabin Extra"],
+    phoneNumber: "18556355220",
+    email: "support@aa.com",
     faqs: [
       {
-        question: "How do I change my Qatar Airways flight?",
-        answer: "You can change your Qatar Airways flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. You can also call Qatar Airways customer service at +1-877-809-9955 for assistance."
+        question: "How do I change my American Airlines flight?",
+        answer: "You can change your American Airlines flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name to access your reservation. You can also call American Airlines customer service at +1-855-635-5220 for assistance with changes."
       },
       {
-        question: "What is the Qatar Airways cancellation policy?",
-        answer: "Qatar Airways cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
+        question: "What is the American Airlines cancellation policy?",
+        answer: "American Airlines cancellation policy varies by fare type. Fully refundable tickets are eligible for a full refund. Non-refundable tickets may receive a travel credit for future travel. Cancellations made within 24 hours of booking are eligible for a full refund regardless of fare type."
       },
       {
-        question: "Can I reschedule my Qatar Airways flight without penalty?",
-        answer: "Qatar Airways offers free changes for Business and First Class tickets. Premium Economy and Economy tickets may have fees depending on the fare type. Privilege Club members with elite status may receive complimentary changes."
+        question: "Can I reschedule my American Airlines flight without penalty?",
+        answer: "American Airlines offers flexible rescheduling options. Business and First Class tickets typically have no change fees. Premium Economy and Economy tickets may have change fees depending on the fare type. AAdvantage elite members may receive complimentary changes."
       },
       {
-        question: "How do I correct a name error on my Qatar Airways ticket?",
-        answer: "Contact Qatar Airways customer service at +1-877-809-9955 for name correction assistance on your ticket. Minor name corrections can be made within 24 hours of booking."
+        question: "How do I correct a name error on my American Airlines ticket?",
+        answer: "Minor name corrections can be made on American Airlines tickets. Contact American Airlines customer service at +1-855-635-5220 for name correction assistance. Changes within 24 hours of booking are typically free."
       },
       {
-        question: "What fees apply for changing my Qatar Airways flight?",
-        answer: "Qatar Airways change fees vary by fare type. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+        question: "What fees apply for changing my American Airlines flight?",
+        answer: "American Airlines change fees vary by fare type, route, and timing. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
       },
       {
-        question: "How do I get a refund from Qatar Airways?",
-        answer: "To request a refund from Qatar Airways, visit the 'Manage Booking' section or call customer service at +1-877-809-9955."
+        question: "How do I get a refund from American Airlines?",
+        answer: "To request a refund from American Airlines, visit the 'Manage Booking' section on their website or call customer service at +1-855-635-5220. Refunds for eligible tickets are processed within 7-10 business days."
       },
       {
-        question: "Can I change my Qatar Airways flight online?",
-        answer: "Yes, most Qatar Airways flights can be changed online through their website. You'll need your booking reference and last name."
+        question: "Can I change my American Airlines flight online?",
+        answer: "Yes, most American Airlines flights can be changed online through the 'Manage Booking' portal on their website. You'll need your booking reference and last name."
       },
       {
-        question: "What happens if Qatar Airways cancels my flight?",
-        answer: "If Qatar Airways cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
+        question: "What happens if American Airlines cancels my flight?",
+        answer: "If American Airlines cancels your flight, you are entitled to a full refund or rebooking on the next available flight at no additional cost. You will be notified via email or text message."
       }
     ]
   },
-  "etihad-airways": {
-    name: "Etihad Airways",
-    code: "EY",
-    description: "Etihad Airways is the flag carrier of the United Arab Emirates, offering luxurious services and connecting Abu Dhabi to destinations across the Middle East, Asia, Europe, and the Americas.",
-    hub: "Zayed International Airport (AUH)",
-    founded: "2003",
-    fleet: "90+",
-    destinations: "80+",
-    alliance: "None",
-    website: "https://www.etihad.com",
-    rating: 4.7,
-    reviews: 2100,
-    highlights: ["The Residence", "First Class", "Business Class", "Etihad Guest", "Chauffeur Service"],
-    phoneNumber: "18557391017",
-    email: "support@etihad.com",
-    faqs: [
-      {
-        question: "How do I change my Etihad Airways flight?",
-        answer: "You can change your Etihad Airways flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. Call Etihad Airways customer service at +1-855-739-1017 for assistance."
-      },
-      {
-        question: "What is the Etihad Airways cancellation policy?",
-        answer: "Etihad Airways cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
-      },
-      {
-        question: "Can I reschedule my Etihad Airways flight without penalty?",
-        answer: "Etihad Airways offers free changes for First and Business Class tickets. Economy tickets may have change fees depending on the fare type. Etihad Guest members with elite status may receive complimentary changes."
-      },
-      {
-        question: "How do I correct a name error on my Etihad Airways ticket?",
-        answer: "Contact Etihad Airways customer service at +1-855-739-1017 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
-      },
-      {
-        question: "What fees apply for changing my Etihad Airways flight?",
-        answer: "Etihad Airways change fees vary by fare type. First and Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
-      },
-      {
-        question: "How do I get a refund from Etihad Airways?",
-        answer: "To request a refund from Etihad Airways, visit the 'Manage Booking' section or call customer service at +1-855-739-1017."
-      },
-      {
-        question: "Can I change my Etihad Airways flight online?",
-        answer: "Yes, most Etihad Airways flights can be changed online through their website. You'll need your booking reference and last name."
-      },
-      {
-        question: "What happens if Etihad Airways cancels my flight?",
-        answer: "If Etihad Airways cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
-      }
-    ]
-  },
-  "kuwait-airways": {
-    name: "Kuwait Airways",
-    code: "KU",
-    description: "Kuwait Airways is the flag carrier of Kuwait, offering authentic Arabian hospitality and connecting Kuwait City to destinations across the Middle East, Asia, Europe, and North America.",
-    hub: "Kuwait International Airport (KWI)",
-    founded: "1954",
-    fleet: "30+",
-    destinations: "60+",
-    alliance: "None",
-    website: "https://www.kuwaitairways.com",
+  "united-airlines": {
+    name: "United Airlines",
+    code: "UA",
+    description: "United Airlines is a major American airline with a extensive global network, connecting passengers to destinations across North America, Europe, Asia, and beyond. Known for its innovative services and modern fleet.",
+    hub: "Chicago O'Hare International Airport (ORD)",
+    founded: "1926",
+    fleet: "800+",
+    destinations: "340+",
+    alliance: "Star Alliance",
+    website: "https://www.united.com",
     rating: 4.3,
-    reviews: 980,
-    highlights: ["Business Class", "Premium Economy", "Economy", "Oasis Club", "Arabian Hospitality"],
-    phoneNumber: "18663722767",
-    email: "support@kuwaitairways.com",
+    reviews: 2300,
+    highlights: ["Polaris Business Class", "Premium Plus", "United Clubs", "MileagePlus", "Economy Plus"],
+    phoneNumber: "18556355220",
+    email: "support@united.com",
     faqs: [
       {
-        question: "How do I change my Kuwait Airways flight?",
-        answer: "You can change your Kuwait Airways flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. Call Kuwait Airways customer service at +1-866-372-2767 for assistance."
+        question: "How do I change my United Airlines flight?",
+        answer: "You can change your United Airlines flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. You can also call United Airlines customer service at +1-855-635-5220 for assistance."
       },
       {
-        question: "What is the Kuwait Airways cancellation policy?",
-        answer: "Kuwait Airways cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
+        question: "What is the United Airlines cancellation policy?",
+        answer: "United Airlines cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
       },
       {
-        question: "Can I reschedule my Kuwait Airways flight without penalty?",
-        answer: "Kuwait Airways offers free changes for Business Class tickets. Economy tickets may have change fees depending on the fare type. Oasis Club members may receive complimentary changes."
+        question: "Can I reschedule my United Airlines flight without penalty?",
+        answer: "United Airlines offers free changes for Business and First Class tickets. Premium Economy and Economy tickets may have fees depending on the fare type. MileagePlus members with elite status may receive complimentary changes."
       },
       {
-        question: "How do I correct a name error on my Kuwait Airways ticket?",
-        answer: "Contact Kuwait Airways customer service at +1-866-372-2767 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
+        question: "How do I correct a name error on my United Airlines ticket?",
+        answer: "Contact United Airlines customer service at +1-855-635-5220 for name correction assistance on your ticket. Minor name corrections can be made within 24 hours of booking."
       },
       {
-        question: "What fees apply for changing my Kuwait Airways flight?",
-        answer: "Kuwait Airways change fees vary by fare type. Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+        question: "What fees apply for changing my United Airlines flight?",
+        answer: "United Airlines change fees vary by fare type. Business and First Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
       },
       {
-        question: "How do I get a refund from Kuwait Airways?",
-        answer: "To request a refund from Kuwait Airways, visit the 'Manage Booking' section or call customer service at +1-866-372-2767."
+        question: "How do I get a refund from United Airlines?",
+        answer: "To request a refund from United Airlines, visit the 'Manage Booking' section or call customer service at +1-855-635-5220."
       },
       {
-        question: "Can I change my Kuwait Airways flight online?",
-        answer: "Yes, most Kuwait Airways flights can be changed online through their website. You'll need your booking reference and last name."
+        question: "Can I change my United Airlines flight online?",
+        answer: "Yes, most United Airlines flights can be changed online through their website. You'll need your booking reference and last name."
       },
       {
-        question: "What happens if Kuwait Airways cancels my flight?",
-        answer: "If Kuwait Airways cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
+        question: "What happens if United Airlines cancels my flight?",
+        answer: "If United Airlines cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
+      }
+    ]
+  },
+  "delta-airlines": {
+    name: "Delta Airlines",
+    code: "DL",
+    description: "Delta Airlines is a premier American airline offering exceptional service and an extensive network across North America, Europe, Asia, and Latin America. Known for its reliability and customer satisfaction.",
+    hub: "Hartsfield-Jackson Atlanta International Airport (ATL)",
+    founded: "1924",
+    fleet: "800+",
+    destinations: "300+",
+    alliance: "SkyTeam",
+    website: "https://www.delta.com",
+    rating: 4.5,
+    reviews: 2700,
+    highlights: ["Delta One", "Business Class", "Premium Select", "SkyMiles", "Delta Sky Club"],
+    phoneNumber: "18669795016",
+    email: "support@delta.com",
+    faqs: [
+      {
+        question: "How do I change my Delta Airlines flight?",
+        answer: "You can change your Delta Airlines flight online through the 'Manage Booking' section on their website. Enter your booking reference and last name. Call Delta Airlines customer service at +1-866-979-5016 for assistance."
+      },
+      {
+        question: "What is the Delta Airlines cancellation policy?",
+        answer: "Delta Airlines cancellation policy varies by fare type. Fully refundable tickets get a full refund. Non-refundable tickets may receive a travel credit. Cancellations within 24 hours of booking are fully refundable."
+      },
+      {
+        question: "Can I reschedule my Delta Airlines flight without penalty?",
+        answer: "Delta Airlines offers free changes for Delta One and Business Class tickets. Premium Economy and Economy tickets may have fees depending on the fare type. SkyMiles members with elite status may receive complimentary changes."
+      },
+      {
+        question: "How do I correct a name error on my Delta Airlines ticket?",
+        answer: "Contact Delta Airlines customer service at +1-866-979-5016 for name correction assistance. Minor name corrections can be made within 24 hours of booking."
+      },
+      {
+        question: "What fees apply for changing my Delta Airlines flight?",
+        answer: "Delta Airlines change fees vary by fare type. Delta One and Business Class tickets typically have no change fees. Economy tickets may have fees depending on the fare rules."
+      },
+      {
+        question: "How do I get a refund from Delta Airlines?",
+        answer: "To request a refund from Delta Airlines, visit the 'Manage Booking' section or call customer service at +1-866-979-5016."
+      },
+      {
+        question: "Can I change my Delta Airlines flight online?",
+        answer: "Yes, most Delta Airlines flights can be changed online through their website. You'll need your booking reference and last name."
+      },
+      {
+        question: "What happens if Delta Airlines cancels my flight?",
+        answer: "If Delta Airlines cancels your flight, you are entitled to a full refund or rebooking on the next available flight."
       }
     ]
   }

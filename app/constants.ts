@@ -1,20 +1,20 @@
 // Company Information
 export const COMPANY = {
-  name: "TicketNorthAmerica",
-  domain: "ticketnorthamerica.com",
-  email: "bookings@ticketnorthamerica.com",
-  phone: "+1-8338463961",
-  phoneRaw: "18338463961",
+  name: "Ticket to Africa",
+  domain: "tickettoafrica.com",
+  email: "bookings@tickettoafrica.com",
+  phone: "+1-8338772671",
+  phoneRaw: "18338772671",
   address: "123 Travel Street, New York, USA",
   year: new Date().getFullYear(),
 };
 
 // Social Media Links
 export const SOCIAL = {
-  facebook: "https://facebook.com/ticketnorthamerica",
-  twitter: "https://twitter.com/ticketnorthamerica",
-  instagram: "https://instagram.com/ticketnorthamerica",
-  youtube: "https://youtube.com/ticketnorthamerica",
+  facebook: "https://facebook.com/tickettoafrica",
+  twitter: "https://twitter.com/tickettoafrica",
+  instagram: "https://instagram.com/tickettoafrica",
+  youtube: "https://youtube.com/tickettoafrica",
 };
 
 // Contact Information
@@ -44,10 +44,10 @@ export const META = {
     "holiday packages",
     "flights",
     "hotels",
-    "New York package",
-    "Los Angeles package",
-    "Miami package",
-    "Toronto package",
+    "Cape Town package",
+    "Nairobi package",
+    "Cairo package",
+    "Marrakech package",
   ],
 };
 

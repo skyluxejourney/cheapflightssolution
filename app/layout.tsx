@@ -26,12 +26,12 @@ const bodyFont = DM_Sans({
 // });
 
 export const metadata: Metadata = {
-  title: 'TicketNorthAmerica | Luxury Travel & Holiday Packages',
+  title: 'TicketToAfrica | Luxury Travel & Holiday Packages',
   description:
-    'Book luxury holiday packages, flights, hotels and customized trips with TicketNorthAmerica.',
+    'Book luxury holiday packages, flights, hotels and customized trips with TicketToAfrica.',
   keywords: [
     'Skyluxe Journey',
-    'ticket north america',
+    'ticket to africa',
     'travel agency',
     'holiday packages',
     'flights',

@@ -78,7 +78,7 @@ export default function WhyPayMoreSection() {
       <div className="w-full mt-8 sm:mt-10 lg:mt-12">
         <div className="overflow-hidden">
           <img
-            src="/images/bannner.png"
+            src="/images/bookyourflightposter.png"
             alt="Book your next flight - domestic and international travel"
             className="w-full h-auto object-cover"
           />

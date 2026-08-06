@@ -95,7 +95,6 @@ export default function SearchEngine() {
 
   const handleSearch = async () => {
     setIsLoading(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log({
       tripType,
@@ -108,7 +107,6 @@ export default function SearchEngine() {
     setIsLoading(false);
   };
 
-  // Helper functions for calendar
   const getDaysInMonth = (month: number, year: number) => {
     return new Date(year, month + 1, 0).getDate();
   };
@@ -119,7 +117,6 @@ export default function SearchEngine() {
 
   const handleDateSelect = (day: number, isDepart: boolean) => {
     const date = new Date(currentYear, currentMonth, day);
-    // Format date as MM-DD-YYYY
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const dayStr = String(date.getDate()).padStart(2, '0');
     const year = date.getFullYear();
@@ -152,8 +149,7 @@ export default function SearchEngine() {
     const selected = isDepart ? selectedDepartDate : selectedReturnDate;
 
     return (
-      <div className="bg-white  shadow-2xl p-4 w-80 z-[9999] relative border border-[#E2E8F0]">
-        {/* Header with "Choose the Departure" or "Choose the Return" */}
+      <div className="bg-white shadow-2xl p-4 w-80 z-[9999] relative border border-[#E2E8F0] rounded-lg">
         <div className="text-center mb-3">
           <span className="text-xs font-semibold text-black tracking-wider uppercase">
             {isDepart ? 'Choose the Departure' : 'Choose the Return'}
@@ -218,9 +214,12 @@ export default function SearchEngine() {
                 disabled={isPast}
                 className={`
                   h-8 w-full rounded-full text-sm font-medium transition-all duration-200
-                  ${isPast ? 'text-gray-300 cursor-not-allowed line-through' : 'hover:bg-gray-100'}
+                  ${isPast 
+                    ? 'text-gray-300 cursor-not-allowed line-through' 
+                    : 'text-black hover:bg-gray-100'
+                  }
                   ${isSelected ? 'bg-black text-white hover:bg-black/90' : ''}
-                  ${isToday && !isSelected ? 'border-2 border-black text-black font-bold' : ''}
+                  ${isToday && !isSelected ? 'border-2 border-black font-bold' : ''}
                 `}
               >
                 {day}
@@ -233,7 +232,7 @@ export default function SearchEngine() {
   };
 
   return (
-    <div className="bg-white  shadow-2xl max-w-6xl mx-auto p-4 relative z-[100] border border-[#E2E8F0]">
+    <div className="bg-white shadow-2xl max-w-6xl mx-auto p-4 relative z-[100] border border-[#E2E8F0]">
       {/* Trip Type Toggle */}
       <div className="flex items-center gap-1 mb-4">
         <button
@@ -283,7 +282,7 @@ export default function SearchEngine() {
               setShowLeavingHints(true);
             }}
             onFocus={() => setShowLeavingHints(true)}
-            className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black placeholder-[#94A3B8] focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
+            className="w-full bg-gray-50 border border-[#E2E8F0] pl-10 pr-8 py-3 text-black placeholder-[#94A3B8] focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
           />
           {leavingFrom && (
             <button
@@ -296,9 +295,8 @@ export default function SearchEngine() {
               <X size={14} />
             </button>
           )}
-          {/* Hints Dropdown - Wider */}
           {showLeavingHints && filteredLeaving.length > 0 && (
-            <div className="absolute bottom-full left-0 w-[280px] mb-1 bg-white  shadow-lg border border-[#E2E8F0] max-h-52 overflow-y-auto z-[9999] custom-scrollbar">
+            <div className="absolute bottom-full left-0 w-[280px] mb-1 bg-white shadow-lg border border-[#E2E8F0] max-h-52 overflow-y-auto z-[9999] custom-scrollbar">
               {filteredLeaving.map((loc) => (
                 <button
                   key={loc.code}
@@ -342,7 +340,7 @@ export default function SearchEngine() {
               setShowDepartingHints(true);
             }}
             onFocus={() => setShowDepartingHints(true)}
-            className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black placeholder-[#94A3B8] focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
+            className="w-full bg-gray-50 border border-[#E2E8F0] pl-10 pr-8 py-3 text-black placeholder-[#94A3B8] focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
           />
           {departingTo && (
             <button
@@ -355,9 +353,8 @@ export default function SearchEngine() {
               <X size={14} />
             </button>
           )}
-          {/* Hints Dropdown - Wider */}
           {showDepartingHints && filteredDeparting.length > 0 && (
-            <div className="absolute bottom-full left-0 w-[280px] mb-1 bg-white  shadow-lg border border-[#E2E8F0] max-h-52 overflow-y-auto z-[9999] custom-scrollbar">
+            <div className="absolute bottom-full left-0 w-[280px] mb-1 bg-white shadow-lg border border-[#E2E8F0] max-h-52 overflow-y-auto z-[9999] custom-scrollbar">
               {filteredDeparting.map((loc) => (
                 <button
                   key={loc.code}
@@ -397,7 +394,7 @@ export default function SearchEngine() {
               setShowDepartCalendar(!showDepartCalendar);
               setShowReturnCalendar(false);
             }}
-            className="w-full lg:w-45 bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
+            className="w-full lg:w-45 bg-gray-50 border border-[#E2E8F0] pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
           >
             {departDate ? formatDisplayDate(departDate) : <span className="text-[#94A3B8]">Departure Date</span>}
           </button>
@@ -412,7 +409,6 @@ export default function SearchEngine() {
               <X size={14} />
             </button>
           )}
-          {/* Calendar - Positioned Above */}
           {showDepartCalendar && (
             <div className="absolute bottom-full left-0 mb-1 z-[9999]">
               {renderCalendar(true)}
@@ -431,7 +427,7 @@ export default function SearchEngine() {
                 setShowReturnCalendar(!showReturnCalendar);
                 setShowDepartCalendar(false);
               }}
-              className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
+              className="w-full bg-gray-50 border border-[#E2E8F0] pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
             >
               {returnDate ? formatDisplayDate(returnDate) : <span className="text-[#94A3B8]">Return Date</span>}
             </button>
@@ -446,7 +442,6 @@ export default function SearchEngine() {
                 <X size={14} />
               </button>
             )}
-            {/* Calendar - Positioned Above */}
             {showReturnCalendar && (
               <div className="absolute bottom-full left-0 mb-1 z-[9999]">
                 {renderCalendar(false)}
@@ -462,14 +457,13 @@ export default function SearchEngine() {
           </div>
           <button
             onClick={() => setShowPassengerDropdown(!showPassengerDropdown)}
-            className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px] flex items-center"
+            className="w-full bg-gray-50 border border-[#E2E8F0] pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px] flex items-center"
           >
             <span>{passengerCount} {passengerCount === 1 ? 'Passenger' : 'Passengers'}</span>
           </button>
 
-          {/* Passenger Dropdown */}
           {showPassengerDropdown && (
-            <div className="absolute bottom-full left-0 mb-1 bg-white  shadow-lg border border-[#E2E8F0] p-4 w-56 z-[9999]">
+            <div className="absolute bottom-full left-0 mb-1 bg-white shadow-lg border border-[#E2E8F0] p-4 w-56 z-[9999]">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-black">Passengers</span>
                 <div className="flex items-center gap-3">
@@ -494,12 +488,12 @@ export default function SearchEngine() {
           )}
         </div>
 
-        {/* Search Button - Rectangular with loading state */}
+        {/* Search Button */}
         <div className="lg:col-span-1 flex items-center">
           <button
             onClick={handleSearch}
             disabled={isLoading}
-            className={`w-full bg-black text-white  transition-all duration-300 flex items-center justify-center h-[52px] px-6 ${
+            className={`w-full bg-black text-white transition-all duration-300 flex items-center justify-center h-[52px] px-6 ${
               isLoading 
                 ? 'opacity-80 cursor-not-allowed' 
                 : 'hover:bg-black/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-black/30 hover:shadow-black/40'
@@ -520,7 +514,6 @@ export default function SearchEngine() {
         </div>
       </div>
 
-      {/* Custom Scrollbar Styles */}
       <style jsx>{`
         .custom-scrollbar::-webkit-scrollbar {
           width: 4px;

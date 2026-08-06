@@ -149,7 +149,7 @@ export default function SearchEngine() {
     const selected = isDepart ? selectedDepartDate : selectedReturnDate;
 
     return (
-      <div className="bg-white shadow-2xl p-4 w-80 z-[9999] relative border border-[#E2E8F0] rounded-lg">
+      <div className="bg-white shadow-2xl p-4 w-80 z-[9999] relative border border-[#E2E8F0] ">
         <div className="text-center mb-3">
           <span className="text-xs font-semibold text-black tracking-wider uppercase">
             {isDepart ? 'Choose the Departure' : 'Choose the Return'}
@@ -216,9 +216,10 @@ export default function SearchEngine() {
                   h-8 w-full rounded-full text-sm font-medium transition-all duration-200
                   ${isPast 
                     ? 'text-gray-300 cursor-not-allowed line-through' 
-                    : 'text-black hover:bg-gray-100'
+                    : isSelected 
+                      ? 'bg-black text-white hover:bg-black/90' 
+                      : 'text-black hover:bg-gray-100'
                   }
-                  ${isSelected ? 'bg-black text-white hover:bg-black/90' : ''}
                   ${isToday && !isSelected ? 'border-2 border-black font-bold' : ''}
                 `}
               >

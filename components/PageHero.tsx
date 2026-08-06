@@ -11,10 +11,10 @@ export default function PageHero({
   title,
   subtitle,
   backgroundImage = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop",
-  overlayColor = "from-black/70 via-black/60 to-black/75",
+  overlayColor = "from-black/80 via-black/70 to-black/80",
 }: PageHeroProps) {
   return (
-    <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-20 sm:pt-24">
+    <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-28 sm:pt-32 lg:pt-36">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
@@ -25,8 +25,8 @@ export default function PageHero({
         />
         {/* Dark Overlay */}
         <div className={`absolute inset-0 bg-gradient-to-b ${overlayColor}`} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Content */}
@@ -36,7 +36,7 @@ export default function PageHero({
             {title}
           </h1>
           {subtitle && (
-            <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4 font-light tracking-wide leading-relaxed">
+            <p className="text-white/60 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4 font-light tracking-wide leading-relaxed">
               {subtitle}
             </p>
           )}

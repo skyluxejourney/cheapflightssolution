@@ -4,23 +4,23 @@ import {BRAND } from "@/app/constants";
 
 export default function WhyPayMoreSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[#F5F9FF]">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Heading - Top Left */}
           <div className="mb-6 sm:mb-8">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1628] leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
               Why Pay More?{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-600">
                 Fly Cheap
               </span>{" "}
               with {BRAND.name}
             </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] rounded-full mt-3" />
+            <div className="w-16 h-1 bg-black rounded-full mt-3" />
           </div>
 
           {/* Content - Full Width */}
-          <div className="space-y-4 sm:space-y-5 text-[#0A1628]/80 text-sm sm:text-base leading-relaxed">
+          <div className="space-y-4 sm:space-y-5 text-black/80 text-sm sm:text-base leading-relaxed">
             <p>
               Traveling is fun until it comes to online flight ticket booking. 
               Finding the best deal on domestic and international flights is 
@@ -66,7 +66,7 @@ export default function WhyPayMoreSection() {
               USA.
             </p>
 
-            <p className="font-semibold text-[#0A1628] text-base sm:text-lg pt-2">
+            <p className="font-semibold text-black text-base sm:text-lg pt-2">
               When you're getting guaranteed cheap flight tickets at {BRAND.name}, 
               why are you delaying your exploration? Explore the world at 
               minimal cost. This world is waiting for you. Go grab the best 
@@ -80,7 +80,7 @@ export default function WhyPayMoreSection() {
       <div className="w-full mt-8 sm:mt-10 lg:mt-12">
         <div className="overflow-hidden">
           <img
-            src="/images/bookyourflightposter.png"
+            src="/images/bookyourflight.png"
             alt="Book your next flight - domestic and international travel"
             className="w-full h-auto object-cover"
           />

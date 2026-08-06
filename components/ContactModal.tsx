@@ -21,7 +21,7 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl max-w-md w-full shadow-2xl animate-in slide-in-from-bottom-4 duration-300 border border-[#E2E8F0]">
+      <div className="relative bg-white  max-w-md w-full shadow-2xl animate-in slide-in-from-bottom-4 duration-300 border border-[#E2E8F0]">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -31,9 +31,9 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
         </button>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] rounded-t-2xl p-6 text-white">
+        <div className="bg-black p-6 text-white">
           <div className="flex items-center gap-3">
-            <div className="bg-white/20 p-2 rounded-xl">
+            <div className="bg-white/20 p-2 ">
               <Ticket size={24} className="text-white" />
             </div>
             <div>
@@ -50,9 +50,9 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
         {/* Content */}
         <div className="p-6">
           <div className="text-center mb-6">
-            <p className="text-[#0A1628]/70 text-sm leading-relaxed">
+            <p className="text-black/70 text-sm leading-relaxed">
               Our team is ready to assist you with any questions about{" "}
-              <span className="font-semibold text-[#1A3A6B]">{selectedItem}</span>.
+              <span className="font-semibold text-black">{selectedItem}</span>.
               Call us now for immediate support!
             </p>
           </div>
@@ -62,31 +62,31 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
             {/* Phone */}
             <a
               href={`tel:${CONTACT.phoneRaw}`}
-              className="flex items-center gap-4 p-4 bg-[#F5F9FF] rounded-xl hover:bg-[#E8F0FE] transition-all duration-300 group border border-[#E2E8F0] hover:border-[#4A8BCF]/30"
+              className="flex items-center gap-4 p-4 bg-gray-50  hover:bg-gray-100 transition-all duration-300 group border border-[#E2E8F0] hover:border-black/30"
             >
-              <div className="bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] p-3 rounded-xl text-white shadow-lg shadow-[#1A3A6B]/20 group-hover:shadow-[#1A3A6B]/30 transition-shadow">
+              <div className="bg-black p-3  text-white shadow-lg shadow-black/20 group-hover:shadow-black/30 transition-shadow">
                 <Phone size={20} />
               </div>
               <div className="flex-1">
-                <p className="text-xs text-[#0A1628]/60">Call Us Now</p>
-                <p className="text-sm font-semibold text-[#0A1628] group-hover:text-[#1A3A6B] transition-colors">
+                <p className="text-xs text-black/60">Call Us Now</p>
+                <p className="text-sm font-semibold text-black group-hover:text-black transition-colors">
                   {CONTACT.phone}
                 </p>
               </div>
-              <PhoneCall size={16} className="text-[#4A8BCF] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <PhoneCall size={16} className="text-black opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
 
             {/* Email */}
             <a
               href={`mailto:${COMPANY.email}`}
-              className="flex items-center gap-4 p-4 bg-[#F5F9FF] rounded-xl hover:bg-[#E8F0FE] transition-all duration-300 group border border-[#E2E8F0] hover:border-[#4A8BCF]/30"
+              className="flex items-center gap-4 p-4 bg-gray-50  hover:bg-gray-100 transition-all duration-300 group border border-[#E2E8F0] hover:border-black/30"
             >
-              <div className="bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] p-3 rounded-xl text-white shadow-lg shadow-[#1A3A6B]/20 group-hover:shadow-[#1A3A6B]/30 transition-shadow">
+              <div className="bg-black p-3  text-white shadow-lg shadow-black/20 group-hover:shadow-black/30 transition-shadow">
                 <Mail size={20} />
               </div>
               <div className="flex-1">
-                <p className="text-xs text-[#0A1628]/60">Email Us</p>
-                <p className="text-sm font-semibold text-[#0A1628] group-hover:text-[#1A3A6B] transition-colors">
+                <p className="text-xs text-black/60">Email Us</p>
+                <p className="text-sm font-semibold text-black group-hover:text-black transition-colors">
                   {COMPANY.email}
                 </p>
               </div>
@@ -94,8 +94,8 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
           </div>
 
           {/* Special Note */}
-          <div className="mt-6 p-4 bg-[#E8F0FE] rounded-xl border border-[#4A8BCF]/20">
-            <p className="text-xs text-[#0A1628]/70 text-center">
+          <div className="mt-6 p-4 bg-gray-100  border border-black/20">
+            <p className="text-xs text-black/70 text-center">
               {CONTACT.supportHours} for all your travel needs
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function ContactModal({ isOpen, onClose, selectedItem = "" }: Con
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="w-full mt-4 bg-[#F5F9FF] hover:bg-[#E8F0FE] text-[#0A1628] font-semibold py-3 rounded-xl transition-colors border border-[#E2E8F0]"
+            className="w-full mt-4 bg-gray-50 hover:bg-gray-100 text-black font-semibold py-3  transition-colors border border-[#E2E8F0]"
           >
             Close
           </button>

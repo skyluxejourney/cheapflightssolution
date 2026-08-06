@@ -155,7 +155,7 @@ export default function SearchEngine() {
       <div className="bg-white  shadow-2xl p-4 w-80 z-[9999] relative border border-[#E2E8F0]">
         {/* Header with "Choose the Departure" or "Choose the Return" */}
         <div className="text-center mb-3">
-          <span className="text-xs font-semibold text-[#1A3A6B] tracking-wider uppercase">
+          <span className="text-xs font-semibold text-black tracking-wider uppercase">
             {isDepart ? 'Choose the Departure' : 'Choose the Return'}
           </span>
         </div>
@@ -170,11 +170,11 @@ export default function SearchEngine() {
                 setCurrentMonth(currentMonth - 1);
               }
             }}
-            className="p-1 hover:bg-[#E8F0FE] rounded-full transition-colors"
+            className="p-1 hover:bg-gray-100 rounded-full transition-colors"
           >
-            <ChevronLeft size={18} className="text-[#1A3A6B]" />
+            <ChevronLeft size={18} className="text-black" />
           </button>
-          <span className="font-semibold text-[#0A1628]">
+          <span className="font-semibold text-black">
             {new Date(currentYear, currentMonth).toLocaleString('default', { month: 'long', year: 'numeric' })}
           </span>
           <button
@@ -186,15 +186,15 @@ export default function SearchEngine() {
                 setCurrentMonth(currentMonth + 1);
               }
             }}
-            className="p-1 hover:bg-[#E8F0FE] rounded-full transition-colors"
+            className="p-1 hover:bg-gray-100 rounded-full transition-colors"
           >
-            <ChevronRight size={18} className="text-[#1A3A6B]" />
+            <ChevronRight size={18} className="text-black" />
           </button>
         </div>
         
         <div className="grid grid-cols-7 gap-1 mb-2">
           {['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'].map((day) => (
-            <div key={day} className="text-center text-xs font-bold text-[#1A3A6B] py-1">
+            <div key={day} className="text-center text-xs font-bold text-black py-1">
               {day}
             </div>
           ))}
@@ -218,9 +218,9 @@ export default function SearchEngine() {
                 disabled={isPast}
                 className={`
                   h-8 w-full rounded-full text-sm font-medium transition-all duration-200
-                  ${isPast ? 'text-gray-300 cursor-not-allowed line-through' : 'hover:bg-[#E8F0FE]'}
-                  ${isSelected ? 'bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] text-white hover:from-[#2B5A9E] hover:to-[#7BAEE0]' : ''}
-                  ${isToday && !isSelected ? 'border-2 border-[#4A8BCF] text-[#1A3A6B] font-bold' : ''}
+                  ${isPast ? 'text-gray-300 cursor-not-allowed line-through' : 'hover:bg-gray-100'}
+                  ${isSelected ? 'bg-black text-white hover:bg-black/90' : ''}
+                  ${isToday && !isSelected ? 'border-2 border-black text-black font-bold' : ''}
                 `}
               >
                 {day}
@@ -240,8 +240,8 @@ export default function SearchEngine() {
           onClick={() => setTripType("roundtrip")}
           className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
             tripType === "roundtrip"
-              ? "bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] text-white shadow-lg shadow-[#1A3A6B]/30"
-              : "text-[#0A1628]/60 hover:text-[#0A1628] hover:bg-[#E8F0FE]"
+              ? "bg-black text-white shadow-lg shadow-black/30"
+              : "text-black/60 hover:text-black hover:bg-gray-100"
           }`}
         >
           Round Trip
@@ -250,8 +250,8 @@ export default function SearchEngine() {
           onClick={() => setTripType("oneway")}
           className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
             tripType === "oneway"
-              ? "bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] text-white shadow-lg shadow-[#1A3A6B]/30"
-              : "text-[#0A1628]/60 hover:text-[#0A1628] hover:bg-[#E8F0FE]"
+              ? "bg-black text-white shadow-lg shadow-black/30"
+              : "text-black/60 hover:text-black hover:bg-gray-100"
           }`}
         >
           One Way
@@ -260,8 +260,8 @@ export default function SearchEngine() {
           onClick={() => setTripType("multicity")}
           className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
             tripType === "multicity"
-              ? "bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] text-white shadow-lg shadow-[#1A3A6B]/30"
-              : "text-[#0A1628]/60 hover:text-[#0A1628] hover:bg-[#E8F0FE]"
+              ? "bg-black text-white shadow-lg shadow-black/30"
+              : "text-black/60 hover:text-black hover:bg-gray-100"
           }`}
         >
           Multi-City
@@ -271,7 +271,7 @@ export default function SearchEngine() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
         {/* Leaving From */}
         <div className="relative lg:col-span-1" ref={leavingRef}>
-          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1A3A6B] z-10">
+          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black z-10">
             <PlaneTakeoff size={16} className="block" />
           </div>
           <input
@@ -283,7 +283,7 @@ export default function SearchEngine() {
               setShowLeavingHints(true);
             }}
             onFocus={() => setShowLeavingHints(true)}
-            className="w-full bg-[#F5F9FF] border border-[#E2E8F0]  pl-10 pr-8 py-3 text-[#0A1628] placeholder-[#94A3B8] focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-[#1A3A6B]/20 transition-all duration-300 text-sm h-[52px]"
+            className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black placeholder-[#94A3B8] focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
           />
           {leavingFrom && (
             <button
@@ -306,20 +306,20 @@ export default function SearchEngine() {
                     setLeavingFrom(`${loc.name} (${loc.code})`);
                     setShowLeavingHints(false);
                   }}
-                  className="w-full text-left px-4 py-3 hover:bg-[#E8F0FE] transition-colors flex items-center justify-between border-b border-[#E2E8F0] last:border-0"
+                  className="w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors flex items-center justify-between border-b border-[#E2E8F0] last:border-0"
                 >
                   <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <MapPin size={14} className="text-[#1A3A6B] flex-shrink-0" />
+                    <MapPin size={14} className="text-black flex-shrink-0" />
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm font-medium text-[#0A1628]">
+                      <span className="text-sm font-medium text-black">
                         {loc.name}
                       </span>
-                      <span className="text-xs text-[#0A1628]/50 ml-2">
+                      <span className="text-xs text-black/50 ml-2">
                         {loc.country}
                       </span>
                     </div>
                   </div>
-                  <div className="text-xs font-semibold text-[#1A3A6B] bg-[#E8F0FE] px-3 py-1 rounded-full flex-shrink-0 ml-2">
+                  <div className="text-xs font-semibold text-black bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 ml-2">
                     {loc.code}
                   </div>
                 </button>
@@ -330,7 +330,7 @@ export default function SearchEngine() {
 
         {/* Departing To */}
         <div className="relative lg:col-span-1" ref={departingRef}>
-          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1A3A6B] z-10">
+          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black z-10">
             <PlaneLanding size={16} className="block" />
           </div>
           <input
@@ -342,7 +342,7 @@ export default function SearchEngine() {
               setShowDepartingHints(true);
             }}
             onFocus={() => setShowDepartingHints(true)}
-            className="w-full bg-[#F5F9FF] border border-[#E2E8F0]  pl-10 pr-8 py-3 text-[#0A1628] placeholder-[#94A3B8] focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-[#1A3A6B]/20 transition-all duration-300 text-sm h-[52px]"
+            className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black placeholder-[#94A3B8] focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
           />
           {departingTo && (
             <button
@@ -365,20 +365,20 @@ export default function SearchEngine() {
                     setDepartingTo(`${loc.name} (${loc.code})`);
                     setShowDepartingHints(false);
                   }}
-                  className="w-full text-left px-4 py-3 hover:bg-[#E8F0FE] transition-colors flex items-center justify-between border-b border-[#E2E8F0] last:border-0"
+                  className="w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors flex items-center justify-between border-b border-[#E2E8F0] last:border-0"
                 >
                   <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <MapPin size={14} className="text-[#1A3A6B] flex-shrink-0" />
+                    <MapPin size={14} className="text-black flex-shrink-0" />
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm font-medium text-[#0A1628]">
+                      <span className="text-sm font-medium text-black">
                         {loc.name}
                       </span>
-                      <span className="text-xs text-[#0A1628]/50 ml-2">
+                      <span className="text-xs text-black/50 ml-2">
                         {loc.country}
                       </span>
                     </div>
                   </div>
-                  <div className="text-xs font-semibold text-[#1A3A6B] bg-[#E8F0FE] px-3 py-1 rounded-full flex-shrink-0 ml-2">
+                  <div className="text-xs font-semibold text-black bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 ml-2">
                     {loc.code}
                   </div>
                 </button>
@@ -389,7 +389,7 @@ export default function SearchEngine() {
 
         {/* Depart Date */}
         <div className="relative lg:col-span-1" ref={departCalendarRef}>
-          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1A3A6B] z-10">
+          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black z-10">
             <Calendar size={16} className="block" />
           </div>
           <button
@@ -397,7 +397,7 @@ export default function SearchEngine() {
               setShowDepartCalendar(!showDepartCalendar);
               setShowReturnCalendar(false);
             }}
-            className="w-full lg:w-45 bg-[#F5F9FF] border border-[#E2E8F0]  pl-10 pr-8 py-3 text-[#0A1628] text-left focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-[#1A3A6B]/20 transition-all duration-300 text-sm h-[52px]"
+            className="w-full lg:w-45 bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
           >
             {departDate ? formatDisplayDate(departDate) : <span className="text-[#94A3B8]">Departure Date</span>}
           </button>
@@ -423,7 +423,7 @@ export default function SearchEngine() {
         {/* Return Date - Only show for round trip */}
         {tripType === "roundtrip" && (
           <div className="relative lg:col-span-1" ref={returnCalendarRef}>
-            <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1A3A6B] z-10">
+            <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black z-10">
               <Calendar size={16} className="block" />
             </div>
             <button
@@ -431,7 +431,7 @@ export default function SearchEngine() {
                 setShowReturnCalendar(!showReturnCalendar);
                 setShowDepartCalendar(false);
               }}
-              className="w-full bg-[#F5F9FF] border border-[#E2E8F0]  pl-10 pr-8 py-3 text-[#0A1628] text-left focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-[#1A3A6B]/20 transition-all duration-300 text-sm h-[52px]"
+              className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px]"
             >
               {returnDate ? formatDisplayDate(returnDate) : <span className="text-[#94A3B8]">Return Date</span>}
             </button>
@@ -457,12 +457,12 @@ export default function SearchEngine() {
 
         {/* Custom Passengers Selector */}
         <div className="relative lg:col-span-1" ref={passengerRef}>
-          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#1A3A6B] z-10">
+          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-black z-10">
             <Users size={16} className="block" />
           </div>
           <button
             onClick={() => setShowPassengerDropdown(!showPassengerDropdown)}
-            className="w-full bg-[#F5F9FF] border border-[#E2E8F0]  pl-10 pr-8 py-3 text-[#0A1628] text-left focus:outline-none focus:border-[#1A3A6B] focus:ring-2 focus:ring-[#1A3A6B]/20 transition-all duration-300 text-sm h-[52px] flex items-center"
+            className="w-full bg-gray-50 border border-[#E2E8F0]  pl-10 pr-8 py-3 text-black text-left focus:outline-none focus:border-black focus:ring-2 focus:ring-black/20 transition-all duration-300 text-sm h-[52px] flex items-center"
           >
             <span>{passengerCount} {passengerCount === 1 ? 'Passenger' : 'Passengers'}</span>
           </button>
@@ -471,22 +471,22 @@ export default function SearchEngine() {
           {showPassengerDropdown && (
             <div className="absolute bottom-full left-0 mb-1 bg-white  shadow-lg border border-[#E2E8F0] p-4 w-56 z-[9999]">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-[#0A1628]">Passengers</span>
+                <span className="text-sm font-medium text-black">Passengers</span>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setPassengerCount(Math.max(1, passengerCount - 1))}
-                    className="w-7 h-7 rounded-full bg-[#E8F0FE] hover:bg-[#1A3A6B]/20 flex items-center justify-center transition-colors"
+                    className="w-7 h-7 rounded-full bg-gray-100 hover:bg-black/20 flex items-center justify-center transition-colors"
                   >
-                    <Minus size={14} className="text-[#1A3A6B]" />
+                    <Minus size={14} className="text-black" />
                   </button>
-                  <span className="text-sm font-semibold text-[#0A1628] w-4 text-center">
+                  <span className="text-sm font-semibold text-black w-4 text-center">
                     {passengerCount}
                   </span>
                   <button
                     onClick={() => setPassengerCount(Math.min(10, passengerCount + 1))}
-                    className="w-7 h-7 rounded-full bg-[#E8F0FE] hover:bg-[#1A3A6B]/20 flex items-center justify-center transition-colors"
+                    className="w-7 h-7 rounded-full bg-gray-100 hover:bg-black/20 flex items-center justify-center transition-colors"
                   >
-                    <Plus size={14} className="text-[#1A3A6B]" />
+                    <Plus size={14} className="text-black" />
                   </button>
                 </div>
               </div>
@@ -499,10 +499,10 @@ export default function SearchEngine() {
           <button
             onClick={handleSearch}
             disabled={isLoading}
-            className={`w-full bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] text-white  transition-all duration-300 flex items-center justify-center h-[52px] px-6 ${
+            className={`w-full bg-black text-white  transition-all duration-300 flex items-center justify-center h-[52px] px-6 ${
               isLoading 
                 ? 'opacity-80 cursor-not-allowed' 
-                : 'hover:from-[#2B5A9E] hover:to-[#7BAEE0] hover:scale-[1.02] active:scale-95 shadow-lg shadow-[#1A3A6B]/30 hover:shadow-[#1A3A6B]/40'
+                : 'hover:bg-black/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-black/30 hover:shadow-black/40'
             }`}
           >
             {isLoading ? (
@@ -526,19 +526,19 @@ export default function SearchEngine() {
           width: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #E8F0FE;
+          background: #f5f5f5;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #1A3A6B;
+          background: #000000;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #2B5A9E;
+          background: #333333;
         }
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #1A3A6B #E8F0FE;
+          scrollbar-color: #000000 #f5f5f5;
         }
       `}</style>
     </div>

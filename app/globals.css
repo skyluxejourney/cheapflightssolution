@@ -2,17 +2,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0A1628;
-  --primary: #1A3A6B;
-  --primary-light: #2B5A9E;
-  --primary-dark: #0D1F3C;
-  --accent: #4A8BCF;
-  --accent-light: #7BAEE0;
-  --accent-dark: #2A6B9E;
-  --light-blue: #E8F0FE;
-  --lightest-blue: #F5F9FF;
-  --gray-light: #F8FAFC;
-  --gray-border: #E2E8F0;
+  --foreground: #000000;
+  --primary: #000000;
+  --primary-light: #1a1a1a;
+  --primary-dark: #000000;
+  --accent: #333333;
+  --accent-light: #666666;
+  --accent-dark: #1a1a1a;
+  --light-gray: #f5f5f5;
+  --lightest-gray: #fafafa;
+  --gray-light: #f8f8f8;
+  --gray-border: #e5e5e5;
 }
 
 @theme inline {
@@ -26,18 +26,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0A1628;
-    --foreground: #E8F0FE;
-    --primary: #4A8BCF;
-    --primary-light: #7BAEE0;
-    --primary-dark: #1A3A6B;
-    --accent: #6BA6D8;
-    --accent-light: #9AC4E8;
-    --accent-dark: #3A7AB0;
-    --light-blue: #1A2A4A;
-    --lightest-blue: #0D1F3C;
-    --gray-light: #162238;
-    --gray-border: #2A3A5A;
+    --background: #000000;
+    --foreground: #ffffff;
+    --primary: #ffffff;
+    --primary-light: #e0e0e0;
+    --primary-dark: #cccccc;
+    --accent: #666666;
+    --accent-light: #999999;
+    --accent-dark: #444444;
+    --light-gray: #1a1a1a;
+    --lightest-gray: #0a0a0a;
+    --gray-light: #111111;
+    --gray-border: #2a2a2a;
   }
 }
 
@@ -45,27 +45,49 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: var(--font-body), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 /* Heading font - applies to all heading tags */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-heading), 'Satisfy', cursive;
   color: var(--primary);
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Utility classes for fonts */
 .font-heading {
-  font-family: var(--font-heading), 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-heading), 'Satisfy', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.satisfy-regular {
+  font-family: var(--font-heading), 'Satisfy', cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .font-body {
-  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: var(--font-body), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 /* Override Tailwind's default sans font */
 .font-sans {
-  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: var(--font-body), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 /* ===== CUSTOM SCROLLBAR THEME ===== */
@@ -76,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--lightest-blue);
+  background: var(--lightest-gray);
   border-radius: 4px;
 }
 
@@ -93,13 +115,13 @@ h1, h2, h3, h4, h5, h6 {
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary) var(--lightest-blue);
+  scrollbar-color: var(--primary) var(--lightest-gray);
 }
 
 /* Optional: For dark mode scrollbar */
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
-    background: var(--light-blue);
+    background: var(--light-gray);
   }
   
   ::-webkit-scrollbar-thumb {
@@ -107,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   * {
-    scrollbar-color: var(--primary-light) var(--light-blue);
+    scrollbar-color: var(--primary-light) var(--light-gray);
   }
 }
 
@@ -129,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: var(--lightest-blue);
+  background: var(--lightest-gray);
   border-radius: 4px;
 }
 
@@ -144,10 +166,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary) var(--lightest-blue);
+  scrollbar-color: var(--primary) var(--lightest-gray);
 }
 
-/* ===== PREMIUM BLUE THEME ADDITIONS ===== */
+/* ===== BLACK & WHITE THEME ADDITIONS ===== */
 
 /* Primary button styles */
 .btn-primary {
@@ -155,12 +177,12 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   border: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(26, 58, 107, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(26, 58, 107, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   background: linear-gradient(135deg, var(--accent-light), var(--primary-light));
 }
 
@@ -176,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(26, 58, 107, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Card styles */
@@ -184,12 +206,12 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--background);
   border: 1px solid var(--gray-border);
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(26, 58, 107, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .card-premium:hover {
-  box-shadow: 0 12px 40px rgba(26, 58, 107, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
   border-color: var(--primary-light);
 }
@@ -222,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Gradient text */
-.text-gradient-blue {
+.text-gradient-black-white {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -230,19 +252,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Section backgrounds */
-.bg-blue-premium {
-  background: linear-gradient(135deg, var(--lightest-blue), var(--light-blue));
+.bg-black-premium {
+  background: linear-gradient(135deg, var(--lightest-gray), var(--light-gray));
 }
 
 .bg-white-premium {
   background: var(--background);
-  box-shadow: 0 2px 20px rgba(26, 58, 107, 0.06);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
 }
 
 /* Input focus styles */
 input:focus, textarea:focus, select:focus {
   border-color: var(--primary) !important;
-  box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15) !important;
   outline: none;
 }
 
@@ -258,8 +280,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Loading spinner */
-.spinner-blue {
-  border: 3px solid var(--lightest-blue);
+.spinner-black-white {
+  border: 3px solid var(--lightest-gray);
   border-top: 3px solid var(--primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -268,4 +290,69 @@ input:focus, textarea:focus, select:focus {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Custom utility classes for black & white theme */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.border-light-gray {
+  border-color: var(--light-gray);
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
+}
+
+.hover\:text-accent:hover {
+  color: var(--accent);
+}
+
+.hover\:bg-light-gray:hover {
+  background-color: var(--light-gray);
+}
+
+.hover\:text-light-gray:hover {
+  color: var(--light-gray);
 }

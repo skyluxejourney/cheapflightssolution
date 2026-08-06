@@ -42,27 +42,27 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
   ];
 
   return (
-    <section className="py-12 sm:py-16 bg-[#F5F9FF]">
+    <section className="py-12 sm:py-16 bg-white mt-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-0">
           {/* Left Side - 70% */}
           <div className="lg:w-[70%] border-r-0 lg:border-r border-[#E2E8F0]">
             <div className="pr-0 lg:pr-8">
               {/* Heading */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0A1628] leading-tight mb-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-tight mb-3">
                 {airlineName} Flight Change, Reschedule & Cancellation
               </h2>
               
               {/* Phone Number */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] p-2 rounded-full text-white">
+                <div className="bg-black p-2 rounded-full text-white">
                   <Phone size={16} />
                 </div>
-                <span className="text-sm sm:text-base font-medium text-[#0A1628]">
+                <span className="text-sm sm:text-base font-medium text-black">
                   Call Airlines Helpdesk:{" "}
                   <a 
                     href={`tel:${phoneNumber.replace(/\s/g, '')}`}
-                    className="text-[#1A3A6B] font-bold hover:text-[#4A8BCF] transition-colors"
+                    className="text-black font-bold hover:text-black/60 transition-colors"
                   >
                     {phoneNumber}
                   </a>
@@ -70,19 +70,19 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
               </div>
 
               {/* Hero Banner - Brand Style with Left Fade */}
-              <div className="relative w-full mb-10 overflow-hidden border border-[#E2E8F0]/10 bg-[#071426] shadow-2xl">
+              <div className="relative w-full mb-10 overflow-hidden border border-[#E2E8F0]/10 bg-black shadow-2xl">
 
                 {/* Background */}
                 <div className="absolute inset-0">
                   <Image
-                    src="/images/changeflightposter.jpg"
+                    src="/images/cheapflightposter.jpg"
                     alt="Change or Cancel Flight"
                     fill
                     className="object-cover object-center"
                   />
 
                   {/* Left-side fade overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#071426]/95 via-[#071426]/75 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-transparent" />
                 </div>
 
                 <div className="relative z-10 flex flex-col lg:flex-row min-h-[460px]">
@@ -163,7 +163,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                     <div className="mt-8 space-y-5">
 
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-[#0A2A66] flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                        <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white flex-shrink-0 shadow-lg">
                           <Calendar size={22} />
                         </div>
 
@@ -178,7 +178,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-[#0A2A66] flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                        <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white flex-shrink-0 shadow-lg">
                           <Clock size={22} />
                         </div>
 
@@ -193,7 +193,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-[#0A2A66] flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                        <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white flex-shrink-0 shadow-lg">
                           <Headphones size={22} />
                         </div>
 
@@ -215,12 +215,12 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                 </div>
 
                 {/* CALL BAR */}
-                <div className="relative z-10 bg-[#0A2A66]/95 backdrop-blur-md text-white border-t border-white/10">
+                <div className="relative z-10 bg-black backdrop-blur-md text-white border-t border-white/10">
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4">
 
                     <div className="flex items-center gap-3">
 
-                      <div className="w-11 h-11 rounded-full bg-white text-[#0A2A66] flex items-center justify-center shadow-lg">
+                      <div className="w-11 h-11 rounded-full bg-white text-black flex items-center justify-center shadow-lg">
                         <Phone size={22} />
                       </div>
 
@@ -237,7 +237,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
 
                     <a
                       href={"tel:" + phoneNumber.replace(/\s/g, "")}
-                      className="inline-flex items-center gap-2 bg-white text-[#0A2A66] px-6 py-3 font-bold hover:bg-[#E8F0FE] transition-all duration-300 shadow-lg"
+                      className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 font-bold hover:bg-black hover:text-white transition-all duration-300 shadow-lg"
                     >
                       <Phone size={18} />
                       Call 24/7
@@ -252,23 +252,23 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
-                    className="bg-white shadow-sm hover:shadow-md transition-all duration-300 p-5 border border-[#E2E8F0] hover:border-[#4A8BCF]/30 group cursor-pointer"
+                    className="bg-white shadow-sm hover:shadow-md transition-all duration-300 p-5 border border-[#E2E8F0] hover:border-black group cursor-pointer"
                   >
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 mt-1">
-                        <div className="w-6 h-6 rounded-full bg-[#E8F0FE] flex items-center justify-center group-hover:bg-[#1A3A6B] transition-colors">
-                          <ChevronRight size={14} className="text-[#1A3A6B] group-hover:text-white transition-colors" />
+                        <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center group-hover:bg-white transition-colors">
+                          <ChevronRight size={14} className="text-white group-hover:text-black transition-colors" />
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-sm sm:text-base font-semibold text-[#0A1628] group-hover:text-[#1A3A6B] transition-colors">
-                          {faq.question}
-                        </h3>
-                        <p className="text-xs sm:text-sm text-[#0A1628]/60 mt-1">
+                       <h3 className="text-sm sm:text-base font-semibold text-black group-hover:text-black transition-colors font-body">
+  {faq.question}
+</h3>
+                        <p className="text-xs sm:text-sm text-black/60 mt-1">
                           {faq.answer.split('.')[0] + '.'}
                         </p>
-                        <div className="mt-3 pt-3 border-t border-[#E8F0FE]">
-                          <p className="text-xs sm:text-sm text-[#0A1628]/70 leading-relaxed">
+                        <div className="mt-3 pt-3 border-t border-black/10">
+                          <p className="text-xs sm:text-sm text-black/70 leading-relaxed">
                             {faq.answer}
                           </p>
                         </div>
@@ -280,16 +280,19 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
             </div>
           </div>
 
-          {/* Right Side - 30% - Image Only */}
+          {/* Right Side - 30% - Image Only with black tint */}
           <div className="lg:w-[30%] flex items-start justify-center">
             <div className="sticky top-24">
-              <Image
-                src="/images/reviewposter.png"
-                alt="Review Us Now"
-                width={400}
-                height={600}
-                className="w-full max-w-[400px] h-auto object-contain"
-              />
+              <div className="relative">
+                <Image
+                  src="/images/reviewposterimage.png"
+                  alt="Review Us Now"
+                  width={400}
+                  height={600}
+                  className="w-full max-w-[400px] h-auto object-contain"
+                />
+                <div className="absolute inset-0 bg-black/10" />
+              </div>
             </div>
           </div>
         </div>
@@ -297,31 +300,31 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
         {/* Three Steps Section */}
         <div className="mt-12 pt-8 border-t border-[#E2E8F0]">
           <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#0A1628]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-black">
               Change Your {airlineName} Flight with {BRAND.name}
             </h3>
-            <div className="w-16 h-1 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] mx-auto mt-3 rounded-full" />
+            <div className="w-16 h-1 bg-black mx-auto mt-3 rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="relative bg-white shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-[#E2E8F0] hover:border-[#4A8BCF]/30 group"
+                className="relative bg-white shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-[#E2E8F0] hover:border-black group"
               >
                 {/* Step Number */}
-                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] text-white text-sm font-bold flex items-center justify-center shadow-lg">
+                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-black text-white text-sm font-bold flex items-center justify-center shadow-lg">
                   {index + 1}
                 </div>
 
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-[#E8F0FE] group-hover:bg-[#1A3A6B] transition-colors duration-300 flex items-center justify-center mb-4">
-                    <step.icon className="w-8 h-8 text-[#1A3A6B] group-hover:text-white transition-colors duration-300" />
+                  <div className="w-16 h-16 rounded-full bg-black group-hover:bg-white transition-colors duration-300 flex items-center justify-center mb-4">
+                    <step.icon className="w-8 h-8 text-white group-hover:text-black transition-colors duration-300" />
                   </div>
-                  <h4 className="text-base font-semibold text-[#0A1628] group-hover:text-[#1A3A6B] transition-colors">
+                  <h4 className="text-base font-semibold text-black group-hover:text-black transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-xs sm:text-sm text-[#0A1628]/60 mt-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-black/60 mt-2 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -329,7 +332,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-[#4A8BCF]/30" />
+                    <ArrowRight className="w-6 h-6 text-black/30" />
                   </div>
                 )}
               </div>
@@ -337,7 +340,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
           </div>
 
           {/* Unbeatable Deals CTA */}
-          <div className="mt-10 bg-gradient-to-r from-[#1A3A6B] to-[#4A8BCF] p-6 sm:p-8 text-center text-white shadow-xl">
+          <div className="mt-10 bg-black p-6 sm:p-8 text-center text-white shadow-xl">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-left">
                 <h4 className="text-xl sm:text-2xl font-bold flex items-center gap-2 !text-white">
@@ -355,7 +358,7 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                 </div>
                 <a
                   href={`tel:${phoneNumber.replace(/\s/g, '')}`}
-                  className="bg-white text-[#1A3A6B] px-6 py-3 rounded-full font-bold hover:bg-[#E8F0FE] transition-colors shadow-lg flex items-center gap-2 whitespace-nowrap"
+                  className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-black hover:text-white transition-colors shadow-lg flex items-center gap-2 whitespace-nowrap"
                 >
                   <Phone size={18} />
                   {phoneNumber}

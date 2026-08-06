@@ -1,29 +1,23 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Inter, Plus_Jakarta_Sans, DM_Sans, Outfit } from 'next/font/google';
+import { Satisfy, Noto_Sans } from 'next/font/google';
 
-// Primary font - Clean, modern sans-serif (similar to Qatar Airways)
-const headingFont = Outfit({
+// Heading font - Satisfy (cursive, elegant hand-written style)
+const headingFont = Satisfy({
   variable: '--font-heading',
   subsets: ['latin'],
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400'],
 });
 
-// Secondary font - Clean body text
-const bodyFont = DM_Sans({
+// Body font - Noto Sans (clean, readable sans-serif)
+const bodyFont = Noto_Sans({
   variable: '--font-body',
   subsets: ['latin'],
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
 });
-
-// Alternative: If you prefer Inter for body
-// const bodyFont = Inter({
-//   variable: '--font-body',
-//   subsets: ['latin'],
-//   display: 'swap',
-// });
 
 export const metadata: Metadata = {
   title: 'CheapFlightsSolution | Luxury Travel & Holiday Packages',

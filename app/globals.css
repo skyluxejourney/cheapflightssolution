@@ -50,6 +50,8 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Heading font - applies to all heading tags */
@@ -355,4 +357,46 @@ input:focus, textarea:focus, select:focus {
 
 .hover\:text-light-gray:hover {
   color: var(--light-gray);
+}
+
+/* ===== FIX: Prevent horizontal scroll and add proper padding on mobile ===== */
+@media (max-width: 640px) {
+  /* Fix for all container elements */
+  .container,
+  .max-w-6xl,
+  .max-w-7xl,
+  .max-w-5xl,
+  .max-w-4xl,
+  .max-w-3xl,
+  .max-w-2xl,
+  .max-w-xl,
+  .max-w-lg,
+  .max-w-md,
+  .max-w-sm,
+  .mx-auto {
+    max-width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Fix for any overflowing elements */
+  * {
+    max-width: 100vw;
+  }
+
+  /* Fix for grids */
+  .grid {
+    gap: 0.5rem !important;
+  }
+
+  /* Fix for flex containers */
+  .flex {
+    flex-wrap: wrap !important;
+  }
+
+  /* Ensure sections have proper padding */
+  section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
 }

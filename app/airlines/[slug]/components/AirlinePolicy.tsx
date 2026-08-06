@@ -94,11 +94,11 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                     <div className="mb-6">
                       <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 text-white px-4 py-3">
                         <Image
-                          src="/logo/ticket.png"
+                          src="/logo/planelogo.png"
                           alt={BRAND.name}
                           width={28}
                           height={28}
-                          className="object-contain"
+                          className="object-contain invert"
                         />
 
                         <div className="leading-tight">
@@ -140,11 +140,11 @@ export default function AirlinePolicy({ airlineName }: AirlinePolicyProps) {
                         <span className="!text-white">with</span>
 
                         <Image
-                          src="/logo/ticket.png"
+                          src="/logo/planelogo.png"
                           alt={BRAND.name}
                           width={24}
                           height={24}
-                          className="object-contain"
+                          className="object-contain invert"
                         />
 
                         <span className="font-extrabold !text-white italic">

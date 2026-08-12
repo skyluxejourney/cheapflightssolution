@@ -14,49 +14,72 @@ import ContactModal from "./ContactModal";
 import Link from "next/link";
 import Image from "next/image";
 import { COMPANY, CONTACT, BRAND } from "@/app/constants";
-import { getAllAirlines, AirlineData } from "@/app/airlines/[slug]/constants";
+import { airlinesDataMap } from "@/app/airlines/[slug]/data";
+import type { AirlineData } from "@/app/airlines/[slug]/airlines-data";
 
 export default function Footer() {
   const [showModal, setShowModal] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
 
   const quickLinks = [
-    { name: "About Us", href: "#" },
-    { name: "Flights", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Disclaimer", href: "/disclaimer" },
+    { name: "Contact Us", href: "#", isModal: true },
+    { name: "Site Map", href: "/sitemap" },
   ];
 
-  // Get all airlines from the airlinesData
-  const allAirlines = getAllAirlines();
-  const airlines = allAirlines.map((airline: AirlineData) => ({
-    name: airline.name,
-    slug: getSlugFromName(airline.name)
-  }));
+  const legalLinks = [
+    { name: "Terms & Conditions", href: "/terms-of-service" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Price Match Promise", href: "/price-match-policy" },
+    { name: "Fulfillment Policy", href: "/fulfillment-policy" },
+    { name: "Fare Disclosure", href: "/fare-disclosure-policy" },
+    { name: "Advertiser Disclosure", href: "/advertiser-disclosure-policy" },
+    { name: "Cookies Policy", href: "/cookies-policy" },
+    
+    { name: "Cancellation and Refund", href: "/cancellation-refund-policy" },
+    { name: "Post Ticketing Service Fees", href: "/post-ticketing-service-fees" },
+    { name: "Taxes and Fees", href: "/taxes-fees-policy" },
+  ];
 
-  // Helper function to generate slug from airline name
+  // Helper function to generate slug from airline name - with safety check
   function getSlugFromName(name: string): string {
+    if (!name || typeof name !== 'string') return "";
     return name
       .toLowerCase()
       .replace(/\s+/g, '-')
       .replace(/[^a-z0-9-]/g, '');
   }
 
-  const handleLinkClick = (e: React.MouseEvent, linkName: string) => {
-    e.preventDefault();
-    setSelectedLink(linkName);
-    setShowModal(true);
+  // Get all airlines from the airlinesDataMap
+  const allAirlines = Object.values(airlinesDataMap);
+  const airlines = allAirlines
+    .filter((airline: AirlineData) => airline.airline?.name)
+    .map((airline: AirlineData) => ({
+      name: airline.airline.name,
+      slug: getSlugFromName(airline.airline.name)
+    }));
+
+  // Split airlines into three columns
+  const midPoint1 = Math.ceil(airlines.length / 3);
+  const midPoint2 = Math.ceil((airlines.length * 2) / 3);
+  const firstColumnAirlines = airlines.slice(0, midPoint1);
+  const secondColumnAirlines = airlines.slice(midPoint1, midPoint2);
+  const thirdColumnAirlines = airlines.slice(midPoint2);
+
+  const handleLinkClick = (e: React.MouseEvent, linkName: string, isModal?: boolean) => {
+    if (isModal) {
+      e.preventDefault();
+      setSelectedLink(linkName);
+      setShowModal(true);
+    }
   };
 
   const closeModal = () => {
     setShowModal(false);
     setSelectedLink("");
   };
-
-  // Split airlines into two columns
-  const midPoint = Math.ceil(airlines.length / 2);
-  const firstColumnAirlines = airlines.slice(0, midPoint);
-  const secondColumnAirlines = airlines.slice(midPoint);
 
   return (
     <>
@@ -111,20 +134,51 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Airlines Section - All Airlines (2 columns) */}
-            <div className="lg:col-span-6">
+            {/* Quick Links Section */}
+            <div className="lg:col-span-2">
+              <h3 className="text-base font-semibold text-black mb-5 border-b border-black/10 pb-3">
+                Quick Links
+              </h3>
+              <ul className="space-y-2">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    {link.isModal ? (
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.name, true)}
+                        className="group flex items-center gap-2 text-sm text-black/60 hover:text-black transition-colors duration-200 cursor-pointer"
+                      >
+                        <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors" />
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="group flex items-center gap-2 text-sm text-black/60 hover:text-black transition-colors duration-200"
+                      >
+                        <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors" />
+                        {link.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Airlines Section - 3 Columns */}
+            <div className="lg:col-span-4">
               <h3 className="text-base font-semibold text-black mb-5 border-b border-black/10 pb-3">
                 Top Airlines
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-1.5">
                 <div className="space-y-1.5">
                   {firstColumnAirlines.map((airline) => (
                     <Link
                       key={airline.name}
                       href={`/airlines/${airline.slug}`}
-                      className="group flex items-center gap-3 py-1.5 text-sm text-black/60 hover:text-black transition-colors duration-200"
+                      className="group flex items-center gap-2 py-1.5 text-sm text-black/60 hover:text-black transition-colors duration-200"
                     >
-                      <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors" />
+                      <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors flex-shrink-0" />
                       <span className="truncate">{airline.name}</span>
                     </Link>
                   ))}
@@ -134,9 +188,21 @@ export default function Footer() {
                     <Link
                       key={airline.name}
                       href={`/airlines/${airline.slug}`}
-                      className="group flex items-center gap-3 py-1.5 text-sm text-black/60 hover:text-black transition-colors duration-200"
+                      className="group flex items-center gap-2 py-1.5 text-sm text-black/60 hover:text-black transition-colors duration-200"
                     >
-                      <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors" />
+                      <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors flex-shrink-0" />
+                      <span className="truncate">{airline.name}</span>
+                    </Link>
+                  ))}
+                </div>
+                <div className="space-y-1.5">
+                  {thirdColumnAirlines.map((airline) => (
+                    <Link
+                      key={airline.name}
+                      href={`/airlines/${airline.slug}`}
+                      className="group flex items-center gap-2 py-1.5 text-sm text-black/60 hover:text-black transition-colors duration-200"
+                    >
+                      <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors flex-shrink-0" />
                       <span className="truncate">{airline.name}</span>
                     </Link>
                   ))}
@@ -144,68 +210,22 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Contact Section */}
+            {/* Legal Links Section */}
             <div className="lg:col-span-3">
               <h3 className="text-base font-semibold text-black mb-5 border-b border-black/10 pb-3">
-                Contact Us
+                Legal Links
               </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-9 w-9 items-center justify-center bg-black/5 border border-black/10 flex-shrink-0">
-                    <Phone size={16} className="text-black" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-medium uppercase tracking-wide text-black/40 mb-1">
-                      Phone
-                    </p>
-                    <p className="text-sm text-black/70 break-words">
-                      {CONTACT.phone}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-9 w-9 items-center justify-center bg-black/5 border border-black/10 flex-shrink-0">
-                    <Mail size={16} className="text-black" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-medium uppercase tracking-wide text-black/40 mb-1">
-                      Email
-                    </p>
-                    <p className="text-sm text-black/70 break-all">
-                      {COMPANY.email}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-9 w-9 items-center justify-center bg-black/5 border border-black/10 flex-shrink-0">
-                    <MapPin size={16} className="text-black" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-medium uppercase tracking-wide text-black/40 mb-1">
-                      Address
-                    </p>
-                    <p className="text-sm leading-6 text-black/70 break-words">
-                      {COMPANY.address}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-9 w-9 items-center justify-center bg-black/5 border border-black/10 flex-shrink-0">
-                    <Clock size={16} className="text-black" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-medium uppercase tracking-wide text-black/40 mb-1">
-                      Support
-                    </p>
-                    <p className="text-sm text-black/70 break-words">
-                      {CONTACT.supportHours}
-                    </p>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 gap-y-1.5">
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="group flex items-center gap-2 text-sm text-black/60 hover:text-black transition-colors duration-200"
+                  >
+                    <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors flex-shrink-0" />
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -242,20 +262,20 @@ export default function Footer() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-black/40">
               <p>
-                &copy; {COMPANY.year} {COMPANY.name}. All rights reserved.
+                &copy; {COMPANY.year || new Date().getFullYear()} {COMPANY.name || BRAND.name}. All rights reserved.
               </p>
               <div className="flex items-center gap-4">
-                <a href="#" className="hover:text-black transition-colors">
+                <Link href="/privacy-policy" className="hover:text-black transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
                 <span className="w-px h-3 bg-black/10" />
-                <a href="#" className="hover:text-black transition-colors">
+                <Link href="/terms-of-service" className="hover:text-black transition-colors">
                   Terms of Service
-                </a>
+                </Link>
                 <span className="w-px h-3 bg-black/10" />
-                <a href="#" className="hover:text-black transition-colors">
+                <Link href="/cookies-policy" className="hover:text-black transition-colors">
                   Cookie Policy
-                </a>
+                </Link>
               </div>
             </div>
           </div>

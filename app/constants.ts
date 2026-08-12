@@ -2,7 +2,7 @@
 export const COMPANY = {
   name: "CheapFlightsSolution",
   domain: "cheapflightsolution.com",
-  email: "bookings@cheapflightsolution.com",
+  email: "Reservations@cheapflightssolution.com",
   phone: "+1-8776852739",
   phoneRaw: "18776852739",
   address: "123 Travel Street, New York, USA",

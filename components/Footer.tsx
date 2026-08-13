@@ -9,6 +9,7 @@ import {
   Clock,
   Award,
   Shield,
+  AlertCircle,
 } from "lucide-react";
 import ContactModal from "./ContactModal";
 import Link from "next/link";
@@ -85,7 +86,7 @@ export default function Footer() {
     <>
       <footer className="bg-white text-black border-t border-black/10">
         {/* Main Footer */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
 
             {/* Brand Section */}
@@ -253,6 +254,32 @@ export default function Footer() {
                   Subscribe
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer Section - Full Width */}
+        <div 
+          className="w-full"
+          style={{ 
+            backgroundColor: '#00000005', 
+            borderTop: '1px solid #0000001A', 
+            borderBottom: '1px solid #0000001A'
+          }}
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5">
+            <div className="flex items-start gap-2 sm:gap-3">
+              <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-black" />
+              <p className="text-[10px] sm:text-xs leading-relaxed text-black/60">
+                <span className="font-semibold text-black">Disclaimer:</span>{" "}
+                This Disclaimer governs the use of the website www.cheapflightssolution.com 
+                (the "Website"), operated by Noam Flyers Inc. ("Company," "we," "us," 
+                or "our"), a USA-registered travel company. CheapFlightsSolution is an 
+                independent online travel agency and is not an airline. We are not 
+                affiliated with, owned by, or operated by any airline. Our role is to 
+                facilitate travel bookings and provide customers with access to available 
+                travel options from airlines and other travel service providers.
+              </p>
             </div>
           </div>
         </div>

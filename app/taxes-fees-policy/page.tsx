@@ -293,142 +293,114 @@ export default function TaxesFeesPolicyPage() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-white pt-16 sm:pt-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+      <div className="min-h-screen bg-white pt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs sm:text-sm mb-4 sm:mb-6">
-            <NextLink href="/" className="transition-colors" style={{ color: '#000000' }}>
+          <nav className="flex items-center gap-2 text-sm mb-6">
+            <NextLink href="/" className="text-black hover:text-gray-600 transition-colors">
               Home
             </NextLink>
             <span className="text-black/30">›</span>
-            <span className="text-black/60">Taxes & Fees</span>
+            <span className="text-black/60">Taxes & Fees Policy</span>
           </nav>
 
-          {/* Full width container */}
           <div className="w-full">
             {/* Header Section */}
-            <div className="mb-6 sm:mb-8">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight" style={{ color: '#000000' }}>
+            <div className="mb-8">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black leading-tight">
                 Taxes & Fees Policy
               </h1>
-              <div 
-                className="w-10 sm:w-12 h-0.5 sm:h-1 mt-2 sm:mt-3 rounded-full"
-                style={{
-                  background: `linear-gradient(to right, #000000, #666666)`
-                }}
-              />
+              <p className="text-sm text-black/60 mt-2 text-justify">
+                {BRAND.name} is operated by Noam Flyers Inc. {BRAND.name} is an independent travel agency and is not an airline. This page explains the difference between government taxes, airport or passenger charges, airline-imposed charges, and Noam Flyers Inc.'s own service fees.
+              </p>
+              <div className="w-12 h-1 bg-gradient-to-r from-black to-gray-600 rounded-full mt-3" />
             </div>
 
             {/* Sections */}
             {sections.map((section, index) => {
               const Icon = section.icon;
-              const isTwoColumn = section.twoColumn;
-              
               return (
-                <div key={index} className="mt-6 sm:mt-8">
-                  {/* Heading with icon */}
-                  <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                    <div 
-                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: '#f0f0f0' }}
-                    >
-                      <Icon size={16} className="sm:w-4 sm:h-4" style={{ color: '#000000' }} />
+                <div key={index} className="mt-8">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon size={16} className="text-black" />
                     </div>
-                    <h2 className="text-sm sm:text-base lg:text-xl font-bold leading-tight" style={{ color: '#000000' }}>
+                    <h2 className="text-lg sm:text-xl font-bold text-black">
                       {section.title}
                     </h2>
                   </div>
-                  
-                  {/* Content */}
-                  <div className="w-full text-sm sm:text-base lg:text-base leading-relaxed text-justify">
-                    {Array.isArray(section.content) ? (
-                      <div className={isTwoColumn ? "grid grid-cols-1 md:grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 w-full" : "space-y-2 sm:space-y-3 w-full"}>
-                        {section.content.map((paragraph, pIndex) => {
-                          if (paragraph === "") {
-                            return <div key={pIndex} className="h-1 sm:h-2 col-span-2" />;
-                          }
-
-                          if (paragraph.startsWith("•")) {
-                            return (
-                              <div key={pIndex} className="flex items-start gap-2 w-full col-span-2 md:col-span-1 text-justify">
-                                <div 
-                                  className="w-1.5 h-1.5 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"
-                                  style={{ backgroundColor: '#000000' }}
-                                />
-                                <span className="leading-relaxed text-sm sm:text-base flex-1" style={{ color: '#000000/60' }}>
-                                  {paragraph.substring(2)}
-                                </span>
-                              </div>
-                            );
-                          }
-
-                          if (paragraph.startsWith("Component:") || paragraph.startsWith("Noam Flyers Inc. Fee Type:") || paragraph.startsWith("Charge Type:")) {
-                            return (
-                              <p key={pIndex} className="w-full col-span-2 leading-relaxed text-sm sm:text-base font-semibold" style={{ color: '#000000' }}>
-                                {paragraph}
-                              </p>
-                            );
-                          }
-
-                          if (paragraph.startsWith("Draft Amount:") || paragraph.startsWith("Typical Basis:") || paragraph.startsWith("Official/Public Anchor or Treatment:") || paragraph.startsWith("Treatment:")) {
-                            return (
-                              <p key={pIndex} className="w-full col-span-2 leading-relaxed text-sm sm:text-base" style={{ color: '#666666' }}>
-                                {paragraph}
-                              </p>
-                            );
-                          }
-
-                          return (
-                            <p key={pIndex} className="w-full col-span-2 leading-relaxed text-sm sm:text-base" style={{ color: '#000000/60' }}>
-                              {paragraph}
-                            </p>
-                          );
-                        })}
-                      </div>
-                    ) : (
-                      <div className="w-full overflow-x-auto overflow-y-hidden">
-                        <div className="min-w-[640px] sm:min-w-0">
-                          {section.content}
-                        </div>
-                      </div>
-                    )}
+                  <div className="space-y-3 text-sm sm:text-base text-black/70 leading-relaxed">
+                    {section.content.map((paragraph, pIndex) => {
+                      // Check if paragraph starts with "•" to render as list item
+                      if (paragraph.startsWith("•")) {
+                        return (
+                          <div key={pIndex} className="flex items-start gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-black" />
+                            <span className="text-justify">{paragraph.substring(2)}</span>
+                          </div>
+                        );
+                      }
+                      // Check if paragraph is empty for spacing
+                      if (paragraph === "") {
+                        return <div key={pIndex} className="h-2" />;
+                      }
+                      // Check if paragraph is "Component:", "Noam Flyers Inc. Fee Type:", or "Charge Type:"
+                      if (paragraph.startsWith("Component:") || 
+                          paragraph.startsWith("Noam Flyers Inc. Fee Type:") || 
+                          paragraph.startsWith("Charge Type:")) {
+                        return (
+                          <p key={pIndex} className="text-justify font-semibold text-black">
+                            {paragraph}
+                          </p>
+                        );
+                      }
+                      // Check if paragraph is "Draft Amount:", "Typical Basis:", "Official/Public Anchor or Treatment:", or "Treatment:"
+                      if (paragraph.startsWith("Draft Amount:") || 
+                          paragraph.startsWith("Typical Basis:") || 
+                          paragraph.startsWith("Official/Public Anchor or Treatment:") ||
+                          paragraph.startsWith("Treatment:")) {
+                        return (
+                          <p key={pIndex} className="text-justify text-gray-600">
+                            {paragraph}
+                          </p>
+                        );
+                      }
+                      // Check if paragraph is "Typically Determined By:"
+                      if (paragraph.startsWith("Typically Determined By:")) {
+                        return (
+                          <p key={pIndex} className="text-justify text-black/80">
+                            {paragraph}
+                          </p>
+                        );
+                      }
+                      return <p key={pIndex} className="text-justify">{paragraph}</p>;
+                    })}
                   </div>
                 </div>
               );
             })}
 
             {/* Footer Note */}
-            <div className="mt-8 sm:mt-10 p-4 sm:p-6 rounded-lg" style={{ backgroundColor: '#f5f5f5' }}>
-              <p className="text-sm sm:text-base text-center" style={{ color: '#000000/60' }}>
-                {BRAND.name}
-              </p>
-              <p className="text-sm sm:text-base text-center" style={{ color: '#000000/60' }}>
-                Operated by Noam Flyers Inc.
-              </p>
+            <div className="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="space-y-2 text-sm text-black/70 leading-relaxed">
+                <p className="font-semibold text-black">{BRAND.name}</p>
+                <p>Operated by Noam Flyers Inc.</p>
+              </div>
             </div>
 
             {/* Call to Action */}
-            <div 
-              className="mt-8 sm:mt-10 p-4 sm:p-6 rounded-lg text-white w-full"
-              style={{
-                background: `linear-gradient(to right, #000000, #333333)`
-              }}
-            >
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-1.5 sm:mb-2 !text-white">
+            <div className="mt-10 p-6 bg-gradient-to-r from-black to-gray-700 rounded-lg text-white">
+              <h3 className="text-lg sm:text-xl font-bold mb-2 !text-white">
                 Need Help With Your Travel Plans?
               </h3>
-              <p className="text-sm sm:text-base mb-3 sm:mb-4 text-white/80">
+              <p className="text-sm mb-4 !text-white/80">
                 Our travel experts are here to assist you with flight bookings, changes, and more.
               </p>
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105 text-sm sm:text-base"
-                style={{
-                  backgroundColor: '#ffffff',
-                  color: '#000000'
-                }}
+                className="inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:scale-105"
               >
-                <Phone size={16} className="sm:w-4 sm:h-4" />
+                <Phone size={16} />
                 Call Us Now: {CONTACT.phone}
               </a>
             </div>

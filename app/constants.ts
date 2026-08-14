@@ -5,7 +5,7 @@ export const COMPANY = {
   email: "Reservations@cheapflightssolution.com",
   phone: "+1-8776852739",
   phoneRaw: "18776852739",
-  address: "123 Travel Street, New York, USA",
+  address: "Basement Plot Number 35 Sector 11 Dwarka New Delhi 110075",
   year: new Date().getFullYear(),
 };
 

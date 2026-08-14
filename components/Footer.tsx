@@ -22,11 +22,12 @@ export default function Footer() {
   const [showModal, setShowModal] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
 
+  // Updated Quick Links - Contact Us now links to /contact
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Disclaimer", href: "/disclaimer" },
-    { name: "Contact Us", href: "#", isModal: true },
+    { name: "Contact Us", href: "/contact" }, // Changed to /contact
     { name: "Site Map", href: "/sitemap" },
   ];
 
@@ -38,7 +39,6 @@ export default function Footer() {
     { name: "Fare Disclosure", href: "/fare-disclosure-policy" },
     { name: "Advertiser Disclosure", href: "/advertiser-disclosure-policy" },
     { name: "Cookies Policy", href: "/cookies-policy" },
-    
     { name: "Cancellation and Refund", href: "/cancellation-refund-policy" },
     { name: "Post Ticketing Service Fees", href: "/post-ticketing-service-fees" },
     { name: "Taxes and Fees", href: "/taxes-fees-policy" },
@@ -68,14 +68,6 @@ export default function Footer() {
   const firstColumnAirlines = airlines.slice(0, midPoint1);
   const secondColumnAirlines = airlines.slice(midPoint1, midPoint2);
   const thirdColumnAirlines = airlines.slice(midPoint2);
-
-  const handleLinkClick = (e: React.MouseEvent, linkName: string, isModal?: boolean) => {
-    if (isModal) {
-      e.preventDefault();
-      setSelectedLink(linkName);
-      setShowModal(true);
-    }
-  };
 
   const closeModal = () => {
     setShowModal(false);
@@ -143,10 +135,13 @@ export default function Footer() {
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    {link.isModal ? (
+                    {link.name === "Home" ? (
                       <a
                         href={link.href}
-                        onClick={(e) => handleLinkClick(e, link.name, true)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
                         className="group flex items-center gap-2 text-sm text-black/60 hover:text-black transition-colors duration-200 cursor-pointer"
                       >
                         <span className="w-1 h-1 bg-black/30 group-hover:bg-black transition-colors" />

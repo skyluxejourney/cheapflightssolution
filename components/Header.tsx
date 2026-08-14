@@ -15,7 +15,7 @@ import { COMPANY, CONTACT, BRAND } from "@/app/constants";
 const navItems = [
   { name: "FLIGHTS", isActive: true },
   { name: "LIVE HELP?" },
-  { name: "BLOG" },
+  { name: "CONTACT US", isContact: true, path: "/contact" },
   { name: "CUSTOMER SUPPORT" },
 ];
 
@@ -35,7 +35,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (item: { name: string; isActive?: boolean }) => {
+  const handleNavClick = (item: { name: string; isActive?: boolean; isContact?: boolean; path?: string }) => {
+    // If it's the Contact Us link, let it navigate normally
+    if (item.isContact) {
+      return;
+    }
+    
     if (item.isActive) {
       return;
     }
@@ -115,8 +120,9 @@ export default function Header() {
             {/* DESKTOP NAV */}
             <nav className="hidden xl:flex items-center justify-center flex-1 gap-1.5 lg:gap-3 xl:gap-4 px-4">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.name}
+                  href={item.path || "#"}
                   onClick={() => handleNavClick(item)}
                   className={`
                     group
@@ -137,16 +143,20 @@ export default function Header() {
                         ? "text-white bg-transparent"
                         : "text-white/70 hover:text-white"
                     }
+                    ${item.isContact ? "cursor-pointer" : "cursor-pointer"}
                   `}
                 >
                   {item.name}
                   {item.isActive && (
                     <span className="absolute inset-x-2 -bottom-0.5 h-0.5 bg-white" />
                   )}
-                  {!item.isActive && (
+                  {!item.isActive && !item.isContact && (
                     <span className="absolute inset-x-2 -bottom-0.5 h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
                   )}
-                </button>
+                  {item.isContact && (
+                    <span className="absolute inset-x-2 -bottom-0.5 h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+                  )}
+                </Link>
               ))}
             </nav>
 
@@ -242,9 +252,14 @@ export default function Header() {
             >
               <div className="pt-2 border-t border-white/10">
                 {navItems.map((item) => (
-                  <button
+                  <Link
                     key={item.name}
+                    href={item.path || "#"}
                     onClick={() => {
+                      if (item.isContact) {
+                        setOpen(false);
+                        return;
+                      }
                       handleNavClick(item);
                     }}
                     className={`
@@ -263,13 +278,14 @@ export default function Header() {
                           ? "text-white bg-transparent"
                           : "text-white/70 hover:text-white hover:bg-white/5"
                       }
+                      ${item.isContact ? "cursor-pointer" : "cursor-pointer"}
                     `}
                   >
                     {item.name}
                     {item.isActive && (
                       <span className="ml-auto w-1.5 h-1.5 rounded-full bg-white" />
                     )}
-                  </button>
+                  </Link>
                 ))}
                 
                 <div className="mt-3 pt-3 border-t border-white/10">

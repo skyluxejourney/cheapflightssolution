@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Satisfy, Noto_Sans } from 'next/font/google';
+import StatCounter from '@/components/StatCounter';
 
 // Heading font - Satisfy (cursive, elegant hand-written style)
 const headingFont = Satisfy({
@@ -50,6 +51,7 @@ export default function RootLayout({
       className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-gray-900 flex flex-col">
+        <StatCounter />
         {children}
       </body>
     </html>

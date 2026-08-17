@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import SearchEngine from "./SearchEngine";
-import Image from "next/image";
 import { Phone, Headphones } from "lucide-react";
 import { CONTACT } from "@/app/constants";
 
@@ -11,16 +10,19 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 sm:pt-32 lg:pt-36">
-      {/* Background Image with Clean Dark Overlay */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/herobackgroundimage.jpg"
-          alt="Modern Air Travel - Premium Flight Experience"
-          fill
-          className="object-cover object-center"
-          priority
-          quality={100}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="object-cover w-full h-full"
+        >
+          <source src="/video/herobackground.mp4" type="video/mp4" />
+          {/* Fallback image if video doesn't load */}
+          <img src="/images/herobackgroundimage.jpg" alt="Hero Background" className="object-cover w-full h-full" />
+        </video>
         {/* Clean Dark Overlay - No Bluish Tint */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
@@ -47,10 +49,9 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle - Centered */}
-          <p className="text-white/60 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
-            Curated luxury journeys to the most breathtaking destinations.
-            <br className="hidden sm:block" />
-            Let us craft your perfect escape.
+          <p className="text-white/60 italic text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
+            Start your beautiful journey with cheapflightssolution.
+           
           </p>
 
           {/* Search Engine Component */}

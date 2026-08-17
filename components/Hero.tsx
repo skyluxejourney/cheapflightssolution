@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SearchEngine from "./SearchEngine";
 import { Phone, Headphones } from "lucide-react";
 import { CONTACT } from "@/app/constants";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 sm:pt-32 lg:pt-36">
@@ -19,14 +24,11 @@ export default function Hero() {
           playsInline
           className="object-cover w-full h-full"
         >
-          <source src="/video/herobackground.mp4" type="video/mp4" />
+          <source src="/video/herobackgroundvid.mp4" type="video/mp4" />
           {/* Fallback image if video doesn't load */}
           <img src="/images/herobackgroundimage.jpg" alt="Hero Background" className="object-cover w-full h-full" />
         </video>
         {/* Clean Dark Overlay - No Bluish Tint */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
-        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Premium Texture Overlay */}
@@ -35,23 +37,22 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Main Heading - Two Lines Only */}
+          {/* Main Heading - Two Lines Only with Shadow */}
           <h1 className="max-w-4xl mx-auto mb-3 sm:mb-5">
-            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight drop-shadow-[0_2px_30px_rgba(0,0,0,0.5)]">
-              Discover the World's
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.6)]">
+              Ready for Takeoff?
             </span>
             <span className="relative inline-block">
-              <span className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-white leading-[1.1] tracking-tight italic drop-shadow-[0_2px_30px_rgba(0,0,0,0.3)]">
-                Best Travel Experiences
+              <span className="p-5 relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-white leading-[1.1] tracking-tight italic drop-shadow-[0_4px_40px_rgba(0,0,0,0.7)]">
+                Where Can We Fly You Today?
               </span>
               <span className="absolute -bottom-0.5 left-0 w-full h-1 bg-gradient-to-r from-white/30 to-white/5 rounded-full blur-sm" />
             </span>
           </h1>
 
-          {/* Subtitle - Centered */}
-          <p className="text-white/60 italic text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
+          {/* Subtitle - Centered with Enhanced Shadow */}
+          <p className="text-white italic text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 font-light tracking-wide leading-relaxed drop-shadow-[0_4px_30px_rgba(0,0,0,0.7)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             Start your beautiful journey with cheapflightssolution.
-           
           </p>
 
           {/* Search Engine Component */}

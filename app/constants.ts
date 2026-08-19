@@ -9,13 +9,7 @@ export const COMPANY = {
   year: new Date().getFullYear(),
 };
 
-// Social Media Links
-export const SOCIAL = {
-  facebook: "https://facebook.com/cheapflightsolution",
-  twitter: "https://twitter.com/cheapflightsolution",
-  instagram: "https://instagram.com/cheapflightsolution",
-  youtube: "https://youtube.com/cheapflightsolution",
-};
+
 
 // Contact Information
 export const CONTACT = {
@@ -52,7 +46,6 @@ export const META = {
 
 export default {
   COMPANY,
-  SOCIAL,
   CONTACT,
   BRAND,
   META,

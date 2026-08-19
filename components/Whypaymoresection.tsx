@@ -6,7 +6,7 @@ export default function WhyPayMoreSection() {
   return (
     <section className="pt-12 sm:pt-16 lg:pt-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-auto mx-auto">
           {/* Heading - Top Left */}
           <div className="mb-6 sm:mb-8">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">

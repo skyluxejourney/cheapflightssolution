@@ -91,9 +91,7 @@ export default function ContactPage() {
                 Address
               </h3>
               <p className="text-xs font-medium leading-relaxed text-black">
-                Basement Plot Number 35<br />
-                Sector 11, Dwarka<br />
-                New Delhi, 110075
+                {CONTACT.address}
               </p>
             </div>
 
@@ -200,7 +198,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Company Location - Basement Plot Number 35, Sector 11, Dwarka, New Delhi"
+                title={`Company Location - ${CONTACT.address}`}
               />
             </div>
             <div className="mt-1 text-[9px] text-right text-black/30">

@@ -268,15 +268,17 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-/* Selection color */
+/* ===== SELECTION COLOR – VISIBLE IN BOTH MODES ===== */
 ::selection {
   background: var(--primary);
-  color: white;
+  color: var(--background);
+  text-shadow: none;
 }
 
 ::-moz-selection {
   background: var(--primary);
-  color: white;
+  color: var(--background);
+  text-shadow: none;
 }
 
 /* Loading spinner */
